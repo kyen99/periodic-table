@@ -117,11 +117,11 @@ const Left = ({ data, setData, reset, ...props }) => {
                 <option value='yellow.400'>Yellow</option>
               </Select>
             </GridItem>
-            <Box>
-              <Button colorScheme='blue' type='submit'>
-                Save Element
-              </Button>
-            </Box>
+
+            <Button colorScheme='blue' type='submit'>
+              Save
+            </Button>
+            <Button onClick={() => setForm(formDefault)}>Clear</Button>
           </Grid>
         </form>
       </Box>
