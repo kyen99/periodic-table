@@ -31,7 +31,16 @@ const Right = ({ data, ...props }) => {
                       gridColumnStart={parseInt(elements[e].column)}
                       position='relative'
                     >
-                      <Text fontSize={19}>{e}</Text>
+                      <Text fontSize={19} fontWeight={600}>
+                        {e}
+                      </Text>
+                      <Text
+                        letterSpacing={-1}
+                        textTransform='uppercase'
+                        fontSize={6}
+                      >
+                        {elements[e].name}
+                      </Text>
                       <Box position='absolute' right={1} top={0}>
                         <Text fontSize={10}>{elements[e].number}</Text>
                       </Box>
@@ -69,6 +78,7 @@ const Right = ({ data, ...props }) => {
         <Button
           position='absolute'
           bottom={0}
+          right={0}
           onClick={() => setShowGrid(!showGrid)}
         >
           Toggle Grid

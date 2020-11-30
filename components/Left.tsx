@@ -17,6 +17,7 @@ const formDefault = {
   number: '',
   row: '',
   column: '',
+  name: '',
   color: '',
 }
 
@@ -88,6 +89,15 @@ const Left = ({ data, setData, reset, ...props }) => {
               />
             </Box>
             <GridItem colSpan={2}>
+              <Text>Element Name</Text>
+              <Input
+                name='name'
+                bgColor='gray.100'
+                value={form.name}
+                onChange={(e) => setForm({ ...form, name: e.target.value })}
+              />
+            </GridItem>
+            <GridItem colSpan={2}>
               <Text>Color</Text>
               <Select
                 name='color'
@@ -100,15 +110,17 @@ const Left = ({ data, setData, reset, ...props }) => {
                 <option value='blue.200'>Light Blue</option>
                 <option value='green.400'>Green</option>
                 <option value='green.200'>Light Green</option>
+                <option value='orange.300'>Orange</option>
                 <option value='purple.400'>Purple</option>
                 <option value='purple.200'>Light Purple</option>
-                <option value='orange.300'>Orange</option>
                 <option value='red.300'>Red</option>
                 <option value='yellow.400'>Yellow</option>
               </Select>
             </GridItem>
             <Box>
-              <Button type='submit'>Save Element</Button>
+              <Button colorScheme='blue' type='submit'>
+                Save Element
+              </Button>
             </Box>
           </Grid>
         </form>
@@ -148,7 +160,10 @@ const Left = ({ data, setData, reset, ...props }) => {
       <br />
       <hr />
       <br />
-      <Button onClick={() => confirm('Are you sure?') && reset()}>
+      <Button
+        colorScheme='red'
+        onClick={() => confirm('Are you sure?') && reset()}
+      >
         Reset All
       </Button>
     </Box>
