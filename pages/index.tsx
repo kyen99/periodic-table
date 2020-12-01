@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import { Box, Flex } from '@chakra-ui/react'
-import Left from '../components/Left'
-import Right from '../components/Right'
+import Left from '../components/Panel'
+import Right from '../components/PeriodicTable'
 
 const defaultData = { title: '', elements: {} }
 
@@ -26,11 +26,12 @@ export default function Home() {
   return (
     <Box height='100vh'>
       <Head>
-        <title>Create Next App</title>
+        <title>Periodic Table Builder</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Flex direction='row'>
         <Left
+          className='no-print'
           minW='350px'
           p={4}
           bgColor='#ccc'

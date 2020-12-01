@@ -1,6 +1,6 @@
 import { chakra, Box, Button, Flex, Grid, Text } from '@chakra-ui/react'
-import YouTube from 'react-youtube'
 import { useState } from 'react'
+import Videos from './Videos'
 
 const Right = ({ data, ...props }) => {
   const [showGrid, setShowGrid] = useState(true)
@@ -53,6 +53,7 @@ const Right = ({ data, ...props }) => {
             })}
           </Box>
           <Box
+            className='no-print'
             position='absolute'
             top={-50}
             display={showGrid ? 'block' : 'none'}
@@ -83,6 +84,7 @@ const Right = ({ data, ...props }) => {
           </Box>
 
           <Button
+            className='no-print'
             position='absolute'
             bottom={0}
             right={0}
@@ -91,32 +93,7 @@ const Right = ({ data, ...props }) => {
             Toggle Grid
           </Button>
         </Box>
-        <Flex direction='column'>
-          <YouTube
-            videoId='QP0uqR7A1WQ'
-            opts={{ width: '300', height: '170' }}
-          />
-          <br />
-          <YouTube
-            videoId='VRl1KzuJcBw'
-            opts={{ width: '300', height: '170' }}
-          />
-          <br />
-          <YouTube
-            videoId='k8g2hN55gVo'
-            opts={{ width: '300', height: '170' }}
-          />
-          <br />
-          <YouTube
-            videoId='HAB4Ir0k2vY'
-            opts={{ width: '300', height: '170' }}
-          />
-          <br />
-          <YouTube
-            videoId='mLUrHxfDewk'
-            opts={{ width: '300', height: '170' }}
-          />
-        </Flex>
+        <Videos />
       </Flex>
     </Box>
   )
