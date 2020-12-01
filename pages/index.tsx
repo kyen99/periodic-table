@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import { Box, Flex } from '@chakra-ui/react'
-import Left from '../components/Panel'
-import Right from '../components/PeriodicTable'
+import Panel from '../components/Panel'
+import PeriodicTable from '../components/PeriodicTable'
 
 const defaultData = { title: '', elements: {} }
 
@@ -30,7 +30,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Flex direction='row'>
-        <Left
+        <Panel
           className='no-print'
           minW='350px'
           p={4}
@@ -40,7 +40,7 @@ export default function Home() {
           reset={handleReset}
           height='100vh'
         />
-        <Right p={4} data={data} />
+        <PeriodicTable p={4} data={data} />
       </Flex>
     </Box>
   )
