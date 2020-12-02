@@ -122,7 +122,7 @@ const elements = [
 ]
 
 const ElementWords = () => (
-  <Box>
+  <Box class='no-print'>
     {elements.map((a) => (
       <Box key={a[0]}>
         {a[2]} {a[1]} {a[0]}
