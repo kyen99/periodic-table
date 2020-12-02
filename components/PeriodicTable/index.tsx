@@ -2,6 +2,7 @@ import { chakra, Box, Flex, Grid, Text } from '@chakra-ui/react'
 import VideoBox from './VideoBox'
 import Element from './Element'
 import Guide from './Guide'
+import ElementWords from './ElementWords'
 
 const rows = new Array(10).fill(1)
 
@@ -33,6 +34,7 @@ const Right = ({ data, ...props }) => {
         </Box>
         <VideoBox />
       </Flex>
+      <ElementWords />
     </Box>
   )
 }

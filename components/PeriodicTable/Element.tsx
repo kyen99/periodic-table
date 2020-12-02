@@ -18,7 +18,7 @@ const Element = ({ element }: { element: iElement }) => {
       height='50px'
       placeItems='center'
       border='1px solid #000'
-      bgColor={color}
+      bgColor={color || 'white'}
       gridColumnStart={parseInt(column)}
       position='relative'
       _hover={{ transform: 'scale(1.3)', zIndex: '1' }}
