@@ -7,21 +7,21 @@ import PeriodicTable from '../components/PeriodicTable'
 const defaultData = { title: '', elements: {} }
 
 export default function Home() {
-  let storedData
-  if (process.browser) {
-    storedData = JSON.parse(window.localStorage.getItem('data'))
-  }
-
-  const [data, setData] = useState(storedData || defaultData)
+  const [data, setData] = useState(null)
 
   useEffect(() => {
-    if (process.browser)
-      window.localStorage.setItem('data', JSON.stringify(data))
+    setData(JSON.parse(window.localStorage.getItem('data')) || defaultData)
+  }, [])
+
+  useEffect(() => {
+    if (data) window.localStorage.setItem('data', JSON.stringify(data))
   }, [data])
 
   const handleReset = () => {
     setData(defaultData)
   }
+
+  if (!data) return null
 
   return (
     <Box height='100vh'>
