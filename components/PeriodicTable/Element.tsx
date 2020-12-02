@@ -1,4 +1,5 @@
-import { Grid, Text, Box } from '@chakra-ui/react'
+import { chakra, Grid, Text, Box } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
 
 interface iElement {
   symbol: string
@@ -11,8 +12,10 @@ interface iElement {
 
 const Element = ({ element }: { element: iElement }) => {
   const { symbol, color, column, name, number } = element
+  const MotionBox = chakra(motion.div)
   return (
-    <Grid
+    <MotionBox
+      display='grid'
       key={symbol}
       width='50px'
       height='50px'
@@ -22,7 +25,7 @@ const Element = ({ element }: { element: iElement }) => {
       gridColumnStart={parseInt(column)}
       order={parseInt(column)}
       position='relative'
-      _hover={{ transform: 'scale(1.3)', zIndex: '1' }}
+      whileHover={{ scale: 1.5, zIndex: 1 }}
     >
       <Text fontSize={19} fontWeight={600}>
         {symbol}
@@ -33,7 +36,7 @@ const Element = ({ element }: { element: iElement }) => {
       <Box position='absolute' right={1} top={0}>
         <Text fontSize={9}>{number}</Text>
       </Box>
-    </Grid>
+    </MotionBox>
   )
 }
 
