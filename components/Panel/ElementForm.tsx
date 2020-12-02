@@ -99,7 +99,7 @@ const ElementForm = ({ form, setForm, setData, ...rest }) => {
               <option value='purple.400'>Purple</option>
               <option value='purple.200'>Light Purple</option>
               <option value='red.300'>Red</option>
-              <option value='yellow.400'>Yellow</option>
+              <option value='yellow.200'>Yellow</option>
             </Select>
           </GridItem>
 

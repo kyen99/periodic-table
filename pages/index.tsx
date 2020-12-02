@@ -29,16 +29,16 @@ export default function Home() {
         <title>Periodic Table Builder</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Flex direction='row'>
+      <Flex>
         <Panel
           className='no-print'
           minW='350px'
           p={4}
           bgColor='#ccc'
+          height='100vh'
           data={data}
           setData={setData}
           reset={handleReset}
-          height='100vh'
         />
         <PeriodicTable p={4} data={data} />
       </Flex>
