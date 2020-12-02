@@ -7,7 +7,7 @@ const rows = new Array(10).fill(1)
 const Guide = () => {
   const [showGrid, setShowGrid] = useState(true)
   return (
-    <Box className='no-print' position='absolute' top={-50}>
+    <Box className='no-print' position='absolute' top={-50} zIndex={-1}>
       <Box visibility={showGrid ? 'visible' : 'hidden'}>
         <Grid templateColumns='repeat(19, 1fr)'>
           <Grid height={50} width={50} placeItems='center' />

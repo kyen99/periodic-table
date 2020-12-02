@@ -10,7 +10,6 @@ interface iElement {
 }
 
 const Element = ({ element }: { element: iElement }) => {
-  console.log(element)
   const { symbol, color, column, name, number } = element
   return (
     <Grid
@@ -22,6 +21,7 @@ const Element = ({ element }: { element: iElement }) => {
       bgColor={color}
       gridColumnStart={parseInt(column)}
       position='relative'
+      _hover={{ transform: 'scale(1.3)', zIndex: '1' }}
     >
       <Text fontSize={19} fontWeight={600}>
         {symbol}
