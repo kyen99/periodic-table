@@ -20,6 +20,7 @@ const Element = ({ element }: { element: iElement }) => {
       border='1px solid #000'
       bgColor={color || 'white'}
       gridColumnStart={parseInt(column)}
+      order={parseInt(column)}
       position='relative'
       _hover={{ transform: 'scale(1.3)', zIndex: '1' }}
     >
