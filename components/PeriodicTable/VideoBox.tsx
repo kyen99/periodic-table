@@ -8,7 +8,6 @@ const videoIds = [
   'HAB4Ir0k2vY',
   'mLUrHxfDewk',
   'k_9KTww6DiU',
-  'WF_P4MybPhE',
   'SYvrOpOaaWo',
   'IaoRo_xvRDw',
   'cEoYsjWKQ1s',
