@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Stack, Text } from '@chakra-ui/react'
 
-const ElementList = ({ elements, setForm, setData }) => {
+const ElementList = ({ elements, setForm, setData, scrollArea }) => {
   return (
     <Stack mb={10}>
       <Text fontSize={24}>Elements</Text>
@@ -13,7 +13,10 @@ const ElementList = ({ elements, setForm, setData }) => {
             <Button
               size='xs'
               variant='outline'
-              onClick={() => setForm({ symbol: e, ...elements[e] })}
+              onClick={() => {
+                setForm({ symbol: e, ...elements[e] })
+                scrollArea.current.scrollTo(0, 0)
+              }}
             >
               edit
             </Button>

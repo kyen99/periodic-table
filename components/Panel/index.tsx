@@ -1,12 +1,13 @@
 import { chakra, Box, Button, Input, Text } from '@chakra-ui/react'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import ElementForm, { formDefault } from './ElementForm'
 import ElementList from './ElementList'
 
 const Left = ({ data, setData, reset, ...props }) => {
   const [form, setForm] = useState(formDefault)
+  const scrollArea = useRef()
   return (
-    <Box {...props} overflow='scroll'>
+    <Box {...props} overflow='scroll' ref={scrollArea}>
       <Box mb={10}>
         <Text fontSize={24}>Title</Text>
         <Input
@@ -21,6 +22,7 @@ const Left = ({ data, setData, reset, ...props }) => {
         elements={data.elements}
         setForm={setForm}
         setData={setData}
+        scrollArea={scrollArea}
       />
       <hr />
       <Button
