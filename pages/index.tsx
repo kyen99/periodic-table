@@ -40,7 +40,7 @@ export default function Home() {
           setData={setData}
           reset={handleReset}
         />
-        <PeriodicTable p={4} data={data} />
+        <PeriodicTable p={4} data={data} setData={setData} />
       </Flex>
     </Box>
   )

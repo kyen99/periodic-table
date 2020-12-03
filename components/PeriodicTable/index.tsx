@@ -1,13 +1,26 @@
-import { chakra, Box, Button, Flex, Grid, Text } from '@chakra-ui/react'
+import {
+  chakra,
+  Box,
+  Button,
+  Flex,
+  Grid,
+  Tab,
+  Tabs,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Text,
+} from '@chakra-ui/react'
 import { useState } from 'react'
 import VideoBox from './VideoBox'
 import Element from './Element'
 import Guide from './Guide'
+import Editor from './Editor'
 import ElementWords from './ElementWords'
 
 const rows = new Array(10).fill(1)
 
-const Right = ({ data, ...props }) => {
+const PeriodicTable = ({ data, setData, ...props }) => {
   const { title } = data
   const [showGuide, setShowGuide] = useState(true)
   return (
@@ -43,7 +56,20 @@ const Right = ({ data, ...props }) => {
               Toggle Grid
             </Button>
           </Flex>
-          <ElementWords />
+          <Tabs>
+            <TabList>
+              <Tab>Element Words</Tab>
+              <Tab>View Code</Tab>
+            </TabList>
+            <TabPanels>
+              <TabPanel>
+                <ElementWords />
+              </TabPanel>
+              <TabPanel>
+                <Editor data={data} setData={setData} />
+              </TabPanel>
+            </TabPanels>
+          </Tabs>
         </Box>
         <VideoBox />
       </Flex>
@@ -51,4 +77,4 @@ const Right = ({ data, ...props }) => {
   )
 }
 
-export default chakra(Right)
+export default chakra(PeriodicTable)
