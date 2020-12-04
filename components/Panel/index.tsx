@@ -3,7 +3,7 @@ import { useState, useRef } from 'react'
 import ElementForm, { formDefault } from './ElementForm'
 import ElementList from './ElementList'
 
-const Left = ({ data, setData, reset, ...props }) => {
+const Panel = ({ data, setData, reset, ...props }) => {
   const [form, setForm] = useState(formDefault)
   const scrollArea = useRef()
   return (
@@ -24,16 +24,8 @@ const Left = ({ data, setData, reset, ...props }) => {
         setData={setData}
         scrollArea={scrollArea}
       />
-      <hr />
-      <Button
-        mt={5}
-        colorScheme='red'
-        onClick={() => confirm('Are you sure?') && reset()}
-      >
-        Reset All
-      </Button>
     </Box>
   )
 }
 
-export default chakra(Left)
+export default chakra(Panel)

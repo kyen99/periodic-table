@@ -96,7 +96,7 @@ const ElementForm = ({ form, setForm, setData, ...rest }) => {
               <option value='green.400'>Green</option>
               <option value='green.200'>Light Green</option>
               <option value='orange.300'>Orange</option>
-              <option value='purple.500'>Purple</option>
+              <option value='#8b008b'>Purple</option>
               <option value='#9400d3'>Light Purple</option>
               <option value='red.300'>Red</option>
               <option value='yellow.200'>Yellow</option>

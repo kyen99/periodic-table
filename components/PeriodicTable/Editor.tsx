@@ -3,7 +3,7 @@ import { Button, Flex } from '@chakra-ui/react'
 import { useRef, useEffect, useState } from 'react'
 
 const Editor = ({ data, setData }) => {
-  const editorRef = useRef()
+  const editorRef = useRef(null)
   const [isValid, setIsValid] = useState(false)
 
   useEffect(() => {
@@ -16,7 +16,6 @@ const Editor = ({ data, setData }) => {
   const checkCode = () => {
     if (editorRef) {
       try {
-        // @ts-ignore
         JSON.parse(editorRef.current())
         setIsValid(true)
       } catch (e) {
@@ -26,12 +25,34 @@ const Editor = ({ data, setData }) => {
   }
 
   const handleSave = () => {
-    // @ts-ignore
     setData(JSON.parse(editorRef.current()))
   }
 
-  const handleEditorDidMount = (_getter) => {
-    editorRef.current = _getter
+  const handleEditorDidMount = (_ref) => {
+    editorRef.current = _ref
+  }
+
+  const handleEditorWillMount = (monaco) => {
+    monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
+      validate: true,
+      schemas: [
+        {
+          uri: 'http://myserver/foo-schema.json',
+          fileMatch: ['*'],
+          schema: {
+            type: 'object',
+            properties: {
+              p1: {
+                enum: ['v1', 'v2'],
+              },
+              p2: {
+                $ref: 'http://myserver/bar-schema.json',
+              },
+            },
+          },
+        },
+      ],
+    })
   }
 
   return (
@@ -40,7 +61,9 @@ const Editor = ({ data, setData }) => {
         height='80vh'
         language='json'
         value={JSON.stringify(data, null, 2)}
+        // editorWillMount={handleEditorWillMount}
         editorDidMount={handleEditorDidMount}
+        options={{ minimap: { enabled: false } }}
       />
       <Button disabled={!isValid} onClick={handleSave}>
         {isValid ? 'Save' : 'There is an error'}
