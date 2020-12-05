@@ -32,36 +32,12 @@ const Editor = ({ data, setData }) => {
     editorRef.current = _ref
   }
 
-  const handleEditorWillMount = (monaco) => {
-    monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
-      validate: true,
-      schemas: [
-        {
-          uri: 'http://myserver/foo-schema.json',
-          fileMatch: ['*'],
-          schema: {
-            type: 'object',
-            properties: {
-              p1: {
-                enum: ['v1', 'v2'],
-              },
-              p2: {
-                $ref: 'http://myserver/bar-schema.json',
-              },
-            },
-          },
-        },
-      ],
-    })
-  }
-
   return (
     <Flex direction='column'>
       <Monaco
         height='80vh'
         language='json'
         value={JSON.stringify(data, null, 2)}
-        // editorWillMount={handleEditorWillMount}
         editorDidMount={handleEditorDidMount}
         options={{ minimap: { enabled: false } }}
       />
