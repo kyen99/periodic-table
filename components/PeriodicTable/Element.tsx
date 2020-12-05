@@ -15,11 +15,14 @@ const Element = ({ element }: { element: iElement }) => {
   const MotionBox = chakra(motion.div)
   return (
     <MotionBox
-      display='grid'
+      display='flex'
+      flexDirection='column'
+      justifyContent='space-between'
+      alignItems='center'
+      py={2}
       key={symbol}
       width='50px'
       height='50px'
-      placeItems='center'
       border='1px solid #000'
       bgColor={color || 'white'}
       gridColumnStart={parseInt(column)}
