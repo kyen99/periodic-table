@@ -3,11 +3,11 @@ import { useState, useRef } from 'react'
 import ElementForm, { formDefault } from './ElementForm'
 import ElementList from './ElementList'
 
-const Panel = ({ data, setData, reset, ...props }) => {
+const Panel = ({ data, setData, reset, ...rest }) => {
   const [form, setForm] = useState(formDefault)
   const scrollArea = useRef()
   return (
-    <Box {...props} overflow='scroll' ref={scrollArea}>
+    <Box {...rest} overflow='scroll' ref={scrollArea}>
       <Box mb={10}>
         <Heading fontSize={24}>Title</Heading>
         <Input

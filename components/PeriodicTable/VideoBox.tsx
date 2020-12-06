@@ -18,12 +18,13 @@ const opts = { width: '300', height: '170' }
 
 const Video = chakra(YouTube)
 
-const VideoBox = () => (
+const VideoBox = (props) => (
   <Flex
     className='no-print'
     direction='column'
     height='calc(100vh - 100px)'
     overflow='scroll'
+    {...props}
   >
     {videoIds.map((vId) => (
       <Box key={vId}>

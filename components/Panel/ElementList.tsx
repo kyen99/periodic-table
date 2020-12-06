@@ -1,8 +1,8 @@
 import { Box, Button, Flex, Heading, Stack } from '@chakra-ui/react'
 
-const ElementList = ({ elements, setForm, setData, scrollArea }) => {
+const ElementList = ({ elements, setForm, setData, scrollArea, ...rest }) => {
   return (
-    <Stack mb={10}>
+    <Stack mb={10} {...rest}>
       <Heading fontSize={24}>Elements</Heading>
       {Object.keys(elements).map((e) => (
         <Flex key={e} justifyContent='space-between'>

@@ -4,8 +4,14 @@ import { Box, Button, Grid, Text } from '@chakra-ui/react'
 const cols = new Array(18).fill(1)
 const rows = new Array(10).fill(1)
 
-const Guide = () => (
-  <Box className='no-print' position='absolute' top={-50} zIndex={-1}>
+const Guide = (props) => (
+  <Box
+    className='no-print'
+    position='absolute'
+    top={-50}
+    zIndex={-1}
+    {...props}
+  >
     <Grid templateColumns='repeat(19, 1fr)'>
       <Grid height={50} width={50} placeItems='center' />
       {cols.map((_, ci) => (

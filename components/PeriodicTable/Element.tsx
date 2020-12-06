@@ -10,7 +10,7 @@ interface iElement {
   number: string
 }
 
-const Element = ({ element }: { element: iElement }) => {
+const Element = ({ element, ...rest }: { element: iElement }) => {
   const { symbol, color, column, name, number } = element
   const MotionBox = chakra(motion.div)
   return (
@@ -29,6 +29,7 @@ const Element = ({ element }: { element: iElement }) => {
       order={parseInt(column)}
       position='relative'
       whileHover={{ scale: 1.5, zIndex: 1 }}
+      {...rest}
     >
       <Text fontSize={19} fontWeight={600}>
         {symbol}

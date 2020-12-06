@@ -121,8 +121,8 @@ const elements = [
   ['Oganesson', 'Og', 118],
 ]
 
-const ElementWords = () => (
-  <Box class='no-print'>
+const ElementWords = (props) => (
+  <Box class='no-print' {...props}>
     {elements.map((a) => (
       <Box key={a[0]}>
         {a[2]} {a[1]} {a[0]}

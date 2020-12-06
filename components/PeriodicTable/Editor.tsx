@@ -2,7 +2,7 @@ import Monaco from '@monaco-editor/react'
 import { Button, Flex } from '@chakra-ui/react'
 import { useRef, useEffect, useState } from 'react'
 
-const Editor = ({ data, setData }) => {
+const Editor = ({ data, setData, ...rest }) => {
   const editorRef = useRef(null)
   const [isValid, setIsValid] = useState(false)
 
@@ -33,7 +33,7 @@ const Editor = ({ data, setData }) => {
   }
 
   return (
-    <Flex direction='column'>
+    <Flex direction='column' {...rest}>
       <Monaco
         height='80vh'
         language='json'
