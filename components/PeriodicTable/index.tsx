@@ -25,7 +25,7 @@ const PeriodicTable = ({ data, setData, setShowCelebration, ...props }) => {
   const { title } = data
   const [showGuide, setShowGuide] = useState(true)
   return (
-    <Box {...props} height='100vh' width='100%'>
+    <Box {...props} h='100vh' w='100%'>
       <Flex justify='space-between'>
         <Heading fontSize={36} minH={54}>
           {title}

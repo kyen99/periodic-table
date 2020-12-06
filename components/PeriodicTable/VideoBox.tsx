@@ -1,5 +1,5 @@
 import YouTube from 'react-youtube'
-import { chakra, Box, Flex } from '@chakra-ui/react'
+import { Box, Flex } from '@chakra-ui/react'
 
 const videoIds = [
   'QP0uqR7A1WQ',
@@ -16,9 +16,7 @@ const videoIds = [
 
 const opts = { width: '300', height: '170' }
 
-const Video = chakra(YouTube)
-
-const VideoBox = (props) => (
+const VideoBox = (props: any) => (
   <Flex
     className='no-print'
     direction='column'
@@ -28,7 +26,7 @@ const VideoBox = (props) => (
   >
     {videoIds.map((vId) => (
       <Box key={vId}>
-        <Video videoId={vId} opts={opts} mb={4} />
+        <Box as={YouTube} videoId={vId} opts={opts} mb={4} />
       </Box>
     ))}
   </Flex>

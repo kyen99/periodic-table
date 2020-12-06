@@ -38,7 +38,7 @@ const ElementForm = ({ form, setForm, setData, ...rest }) => {
             <Text>Symbol</Text>
             <Input
               name='symbol'
-              width={16}
+              w={16}
               value={form.symbol}
               bgColor='gray.100'
               onChange={(e) => setForm({ ...form, symbol: e.target.value })}
@@ -48,7 +48,7 @@ const ElementForm = ({ form, setForm, setData, ...rest }) => {
             <Text>Atomic Number</Text>
             <Input
               name='number'
-              width={16}
+              w={16}
               value={form.number}
               bgColor='gray.100'
               onChange={(e) => setForm({ ...form, number: e.target.value })}
@@ -58,7 +58,7 @@ const ElementForm = ({ form, setForm, setData, ...rest }) => {
             <Text>Row</Text>
             <Input
               name='row'
-              width={16}
+              w={16}
               value={form.row}
               bgColor='gray.100'
               onChange={(e) => setForm({ ...form, row: e.target.value })}
@@ -68,7 +68,7 @@ const ElementForm = ({ form, setForm, setData, ...rest }) => {
             <Text>Column</Text>
             <Input
               name='column'
-              width={16}
+              w={16}
               value={form.column}
               bgColor='gray.100'
               onChange={(e) => setForm({ ...form, column: e.target.value })}

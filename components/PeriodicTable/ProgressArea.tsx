@@ -1,6 +1,11 @@
 import { Box, Button, Heading, Progress } from '@chakra-ui/react'
 
-const ProgressArea = ({ count, setShowCelebration, ...rest }) => {
+interface iProps {
+  count: number
+  setShowCelebration: (value: boolean) => void
+}
+
+const ProgressArea = ({ count, setShowCelebration, ...rest }: iProps) => {
   const totalElements = 120
   return (
     <Box w={300} {...rest} class='no-print'>

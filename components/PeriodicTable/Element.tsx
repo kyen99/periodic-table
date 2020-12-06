@@ -1,28 +1,18 @@
-import { chakra, Grid, Text, Box } from '@chakra-ui/react'
+import { Box, Flex, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-
-interface iElement {
-  symbol: string
-  color: string
-  column: string
-  row: string
-  name: string
-  number: string
-}
 
 const Element = ({ element, ...rest }: { element: iElement }) => {
   const { symbol, color, column, name, number } = element
-  const MotionBox = chakra(motion.div)
   return (
-    <MotionBox
-      display='flex'
-      flexDirection='column'
-      justifyContent='space-between'
-      alignItems='center'
-      py={2}
+    <Flex
+      as={motion.div}
       key={symbol}
-      width='50px'
-      height='50px'
+      direction='column'
+      justify='space-between'
+      align='center'
+      py={2}
+      w='50px'
+      h='50px'
       border='1px solid #000'
       bgColor={color || 'white'}
       gridColumnStart={parseInt(column)}
@@ -40,7 +30,7 @@ const Element = ({ element, ...rest }: { element: iElement }) => {
       <Box position='absolute' right={1} top={0}>
         <Text fontSize={9}>{number}</Text>
       </Box>
-    </MotionBox>
+    </Flex>
   )
 }
 

@@ -13,20 +13,20 @@ const Guide = (props) => (
     {...props}
   >
     <Grid templateColumns='repeat(19, 1fr)'>
-      <Grid height={50} width={50} placeItems='center' />
+      <Grid h={50} w={50} placeItems='center' />
       {cols.map((_, ci) => (
-        <Grid key={ci} height={50} width={50} placeItems='center'>
+        <Grid key={ci} h={50} w={50} placeItems='center'>
           <Text color='#ccc'>{ci + 1}</Text>
         </Grid>
       ))}
     </Grid>
     {rows.map((_, ri) => (
       <Grid key={ri} templateColumns='repeat(19, 1fr)'>
-        <Grid height={50} width={50} placeItems='center'>
+        <Grid h={50} w={50} placeItems='center'>
           <Text color='#ccc'>{ri + 1}</Text>
         </Grid>
         {cols.map((_, ci) => (
-          <Box key={ci} border='1px dotted #ccc' height={50} width={50} />
+          <Box key={ci} border='1px dotted #ccc' h={50} w={50} />
         ))}
       </Grid>
     ))}

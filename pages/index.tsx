@@ -5,10 +5,10 @@ import Panel from '../components/Panel'
 import PeriodicTable from '../components/PeriodicTable'
 import Fireworks from '../components/Celebration'
 
-const defaultData = { title: '', elements: {} }
+const defaultData: iData | null = { title: '', elements: {} }
 
 export default function Home() {
-  const [data, setData] = useState(null)
+  const [data, setData] = useState<iData>(null)
   const [showCelebration, setShowCelebration] = useState(false)
 
   useEffect(() => {

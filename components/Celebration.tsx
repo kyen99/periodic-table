@@ -23,8 +23,8 @@ const Celebration = ({ setShow }) => {
       m={0}
       top={0}
       left={0}
-      width='100vw'
-      height='100vh'
+      w='100vw'
+      h='100vh'
       bgColor='rgba(0,0,0, 0.8)'
       ref={container}
       zIndex={1}
@@ -37,8 +37,8 @@ const Celebration = ({ setShow }) => {
         position='absolute'
         left={0}
         top={0}
-        height='100vh'
-        width='100vw'
+        h='100vh'
+        w='100vw'
       >
         <Heading color='white' fontSize={64}>
           CONGRATULATIONS!!!
