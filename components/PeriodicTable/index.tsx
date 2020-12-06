@@ -16,18 +16,25 @@ import VideoBox from './VideoBox'
 import Element from './Element'
 import Guide from './Guide'
 import Editor from './Editor'
+import Progress from './ProgressArea'
 import ElementWords from './ElementWords'
 
 const rows = new Array(10).fill(1)
 
-const PeriodicTable = ({ data, setData, ...props }) => {
+const PeriodicTable = ({ data, setData, setShowCelebration, ...props }) => {
   const { title } = data
   const [showGuide, setShowGuide] = useState(true)
   return (
     <Box {...props} height='100vh' width='100%'>
-      <Text fontSize={36} minH={54}>
-        {title}
-      </Text>
+      <Flex justify='space-between'>
+        <Text fontSize={36} minH={54}>
+          {title}
+        </Text>
+        <Progress
+          count={Object.keys(data.elements).length}
+          setShowCelebration={setShowCelebration}
+        />
+      </Flex>
       <Flex justifyContent='space-between' mt={8}>
         <Box position='relative' minH={550} mt={50} w={950}>
           <Box ml={50}>
@@ -56,7 +63,7 @@ const PeriodicTable = ({ data, setData, ...props }) => {
               Toggle Grid
             </Button>
           </Flex>
-          <Tabs>
+          <Tabs class='no-print'>
             <TabList>
               <Tab>Element Words</Tab>
               <Tab>View Code</Tab>

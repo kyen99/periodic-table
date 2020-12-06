@@ -3,11 +3,13 @@ import { useState, useEffect } from 'react'
 import { Box, Flex } from '@chakra-ui/react'
 import Panel from '../components/Panel'
 import PeriodicTable from '../components/PeriodicTable'
+import Fireworks from '../components/Celebration'
 
 const defaultData = { title: '', elements: {} }
 
 export default function Home() {
   const [data, setData] = useState(null)
+  const [showCelebration, setShowCelebration] = useState(false)
 
   useEffect(() => {
     setData(JSON.parse(window.localStorage.getItem('data')) || defaultData)
@@ -29,6 +31,7 @@ export default function Home() {
         <title>Periodic Table Builder</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
+      {showCelebration && <Fireworks setShow={setShowCelebration} />}
       <Flex>
         <Panel
           className='no-print'
@@ -40,7 +43,12 @@ export default function Home() {
           setData={setData}
           reset={handleReset}
         />
-        <PeriodicTable p={4} data={data} setData={setData} />
+        <PeriodicTable
+          p={4}
+          data={data}
+          setData={setData}
+          setShowCelebration={setShowCelebration}
+        />
       </Flex>
     </Box>
   )
