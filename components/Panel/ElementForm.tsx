@@ -1,4 +1,4 @@
-import { useState, SyntheticEvent } from 'react'
+import { SyntheticEvent } from 'react'
 import {
   chakra,
   Box,
@@ -6,6 +6,7 @@ import {
   Input,
   Grid,
   GridItem,
+  Heading,
   Select,
   Text,
 } from '@chakra-ui/react'
@@ -31,7 +32,7 @@ const ElementForm = ({ form, setForm, setData, ...rest }) => {
   return (
     <Box {...rest}>
       <form onSubmit={handleSubmit}>
-        <Text fontSize={24}>Add Element</Text>
+        <Heading fontSize={24}>Add Element</Heading>
         <Grid templateColumns='1fr 1fr' gridGap={6}>
           <Box>
             <Text>Symbol</Text>

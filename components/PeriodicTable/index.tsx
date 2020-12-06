@@ -4,12 +4,12 @@ import {
   Button,
   Flex,
   Grid,
+  Heading,
   Tab,
   Tabs,
   TabList,
   TabPanel,
   TabPanels,
-  Text,
 } from '@chakra-ui/react'
 import { useState } from 'react'
 import VideoBox from './VideoBox'
@@ -27,9 +27,9 @@ const PeriodicTable = ({ data, setData, setShowCelebration, ...props }) => {
   return (
     <Box {...props} height='100vh' width='100%'>
       <Flex justify='space-between'>
-        <Text fontSize={36} minH={54}>
+        <Heading fontSize={36} minH={54}>
           {title}
-        </Text>
+        </Heading>
         <Progress
           count={Object.keys(data.elements).length}
           setShowCelebration={setShowCelebration}

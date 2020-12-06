@@ -1,6 +1,6 @@
 import Fireworks from 'fireworks-canvas'
 import { useRef, useLayoutEffect } from 'react'
-import { Box, Button, Flex, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading } from '@chakra-ui/react'
 
 const Celebration = ({ setShow }) => {
   const container = useRef(null)
@@ -40,12 +40,12 @@ const Celebration = ({ setShow }) => {
         height='100vh'
         width='100vw'
       >
-        <Text color='white' fontSize={64}>
+        <Heading color='white' fontSize={64}>
           CONGRATULATIONS!!!
-        </Text>
-        <Text color='white' fontSize={64}>
+        </Heading>
+        <Heading color='white' fontSize={64}>
           YOU FINISHED!!!
-        </Text>
+        </Heading>
         <Button onClick={() => setShow(false)}>Close</Button>
       </Flex>
     </Box>

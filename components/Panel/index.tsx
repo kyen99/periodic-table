@@ -1,4 +1,4 @@
-import { chakra, Box, Button, Input, Text } from '@chakra-ui/react'
+import { chakra, Box, Input, Heading } from '@chakra-ui/react'
 import { useState, useRef } from 'react'
 import ElementForm, { formDefault } from './ElementForm'
 import ElementList from './ElementList'
@@ -9,7 +9,7 @@ const Panel = ({ data, setData, reset, ...props }) => {
   return (
     <Box {...props} overflow='scroll' ref={scrollArea}>
       <Box mb={10}>
-        <Text fontSize={24}>Title</Text>
+        <Heading fontSize={24}>Title</Heading>
         <Input
           placeholder='Title'
           value={data.title}

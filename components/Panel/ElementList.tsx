@@ -1,9 +1,9 @@
-import { Box, Button, Flex, Stack, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, Stack } from '@chakra-ui/react'
 
 const ElementList = ({ elements, setForm, setData, scrollArea }) => {
   return (
     <Stack mb={10}>
-      <Text fontSize={24}>Elements</Text>
+      <Heading fontSize={24}>Elements</Heading>
       {Object.keys(elements).map((e) => (
         <Flex key={e} justifyContent='space-between'>
           <Box p={1} display='inline-block' bgColor={elements[e].color}>

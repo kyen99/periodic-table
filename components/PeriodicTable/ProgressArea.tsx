@@ -1,4 +1,4 @@
-import { Box, Button, Progress, Text } from '@chakra-ui/react'
+import { Box, Button, Heading, Progress } from '@chakra-ui/react'
 
 const ProgressArea = ({ count, setShowCelebration, ...rest }) => {
   const totalElements = 120
@@ -6,7 +6,9 @@ const ProgressArea = ({ count, setShowCelebration, ...rest }) => {
     <Box w={300} {...rest} class='no-print'>
       {count < totalElements ? (
         <Box>
-          <Text fontSize={20}>Elements needed: {totalElements - count}</Text>
+          <Heading fontSize={20}>
+            Elements needed: {totalElements - count}
+          </Heading>
           <Progress size='lg' max={totalElements} value={count} w='100%' />
         </Box>
       ) : (
