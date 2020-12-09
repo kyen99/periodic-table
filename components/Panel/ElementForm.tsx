@@ -17,6 +17,7 @@ export const formDefault = {
   row: '',
   column: '',
   name: '',
+  mass: '',
   color: '',
 }
 
@@ -84,6 +85,15 @@ const ElementForm = ({ form, setForm, setData, ...rest }) => {
             />
           </GridItem>
           <GridItem colSpan={2}>
+            <Text>Atomic Mass</Text>
+            <Input
+              name='mass'
+              bgColor='gray.100'
+              value={form.mass}
+              onChange={(e) => setForm({ ...form, mass: e.target.value })}
+            />
+          </GridItem>
+          <GridItem colSpan={2}>
             <Text>Color</Text>
             <Select
               name='color'
@@ -94,8 +104,10 @@ const ElementForm = ({ form, setForm, setData, ...rest }) => {
               <option value=''></option>
               <option value='blue.400'>Blue</option>
               <option value='cyan.200'>Light Blue</option>
-              <option value='green.400'>Green</option>
-              <option value='green.200'>Light Green</option>
+              <option value='gray.300'>Gray</option>
+              <option value='green.600'>Dark Green</option>
+              <option value='green.500'>Green</option>
+              <option value='green.300'>Light Green</option>
               <option value='orange.300'>Orange</option>
               <option value='#8b008b'>Purple</option>
               <option value='#9400d3'>Light Purple</option>

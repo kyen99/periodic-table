@@ -4,6 +4,7 @@ interface iElement {
   column: string
   row: string
   name: string
+  mass: string
   number: string
 }
 
