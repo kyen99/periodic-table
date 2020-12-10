@@ -2,6 +2,7 @@ import YouTube from 'react-youtube'
 import { Box, Flex } from '@chakra-ui/react'
 
 const videoIds = [
+  'kheVwSoF-Jc',
   'QP0uqR7A1WQ',
   'VRl1KzuJcBw',
   'k8g2hN55gVo',

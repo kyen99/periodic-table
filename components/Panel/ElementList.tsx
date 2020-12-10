@@ -17,7 +17,8 @@ const ElementList = ({ elements, setForm, setData, scrollArea, ...rest }) => {
         .map((e) => (
           <Flex key={e} justifyContent='space-between'>
             <Box p={1} display='inline-block' bgColor={elements[e].color}>
-              {e}&nbsp;[{elements[e].row}, {elements[e].column}]
+              {e}&nbsp;[{elements[e].row}, {elements[e].column}] -{' '}
+              {elements[e].mass}
             </Box>
             <Box>
               <Button
