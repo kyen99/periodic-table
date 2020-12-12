@@ -1,5 +1,13 @@
 import { useState } from 'react'
-import { Box, Button, Flex, Heading, Input, Stack } from '@chakra-ui/react'
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Input,
+  Stack,
+  Text,
+} from '@chakra-ui/react'
 
 const ElementList = ({ elements, setForm, setData, scrollArea, ...rest }) => {
   const [search, setSearch] = useState('')
@@ -16,10 +24,19 @@ const ElementList = ({ elements, setForm, setData, scrollArea, ...rest }) => {
         .filter((e) => e.toLowerCase().match(search.toLowerCase()))
         .map((e) => (
           <Flex key={e} justifyContent='space-between'>
-            <Box p={1} display='inline-block' bgColor={elements[e].color}>
-              {e}&nbsp;[{elements[e].row}, {elements[e].column}] -{' '}
-              {elements[e].mass}
-            </Box>
+            <Text px={2} display='inline-block' bgColor={elements[e].color}>
+              {e}&nbsp;[{elements[e].row}, {elements[e].column}]
+            </Text>
+            {elements[e].mass && (
+              <Text
+                display='inline'
+                bgColor='blue.400'
+                px={2}
+                textAlign='center'
+              >
+                {elements[e].mass}
+              </Text>
+            )}
             <Box>
               <Button
                 size='xs'
