@@ -1,4 +1,5 @@
 import { Box, Button, Heading, Progress } from '@chakra-ui/react'
+import Link from 'next/link'
 
 interface iProps {
   count: number
@@ -17,13 +18,15 @@ const ProgressArea = ({ count, setShowCelebration, ...rest }: iProps) => {
           <Progress size='lg' max={totalElements} value={count} w='100%' />
         </Box>
       ) : (
-        <Button
-          onClick={() => setShowCelebration(true)}
-          w='100%'
-          class='no-print'
-        >
-          Show Celebration
-        </Button>
+        <Box className='no-print'>
+          <Button onClick={() => setShowCelebration(true)}>
+            Show Celebration
+          </Button>
+          &nbsp;
+          <Link href='/game'>
+            <Button>Play Game</Button>
+          </Link>
+        </Box>
       )}
     </Box>
   )

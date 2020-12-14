@@ -1,8 +1,7 @@
-import { useState } from 'react'
-import { Box, Button, Grid, Text } from '@chakra-ui/react'
+import { Box, Grid, Text } from '@chakra-ui/react'
 
 const cols = new Array(18).fill(1)
-const rows = new Array(10).fill(1)
+const rows = new Array(11).fill(1)
 
 const Guide = (props) => (
   <Box

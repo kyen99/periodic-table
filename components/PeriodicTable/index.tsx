@@ -19,7 +19,7 @@ import Editor from './Editor'
 import Progress from './ProgressArea'
 import ElementWords from './ElementWords'
 
-const rows = new Array(10).fill(1)
+const rows = new Array(11).fill(1)
 
 const PeriodicTable = ({ data, setData, setShowCelebration, ...props }) => {
   const { title } = data

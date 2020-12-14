@@ -1,7 +1,14 @@
-import { Box, Flex, Text } from '@chakra-ui/react'
+import { chakra, Box, Flex, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
-const Element = ({ element, ...rest }: { element: iElement }) => {
+const Element = ({
+  element,
+  zoom = true,
+  ...rest
+}: {
+  element: iElement
+  zoom?: boolean
+}) => {
   const { symbol, color, column, name, mass, number } = element
   return (
     <Flex
@@ -18,7 +25,7 @@ const Element = ({ element, ...rest }: { element: iElement }) => {
       gridColumnStart={parseInt(column)}
       order={parseInt(column)}
       position='relative'
-      whileHover={{ scale: 1.5, zIndex: 1 }}
+      whileHover={zoom ? { scale: 1.5, zIndex: 1 } : {}}
       {...rest}
     >
       <Text fontSize={symbol.length < 3 ? 19 : 12} fontWeight={600}>
@@ -37,4 +44,4 @@ const Element = ({ element, ...rest }: { element: iElement }) => {
   )
 }
 
-export default Element
+export default chakra(Element)
