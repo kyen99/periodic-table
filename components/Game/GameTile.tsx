@@ -39,7 +39,7 @@ const GameTile = ({ element, startX, startY, celebrate, update, ...rest }) => {
         top={startY * 50}
         left={startX * 50}
         boxShadow={active ? '0 0 15px 5px #ccc' : 'initial'}
-        zIndex={active ? 2 : 'initial'}
+        zIndex={active ? 2 : match ? 0 : 1}
         {...rest}
       />
     </Draggable>
