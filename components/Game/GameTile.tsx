@@ -10,12 +10,29 @@ const GameTile = ({ element, startX, startY, celebrate, update, ...rest }) => {
   const [match, setMatch] = useState(false)
 
   useEffect(() => {
-    const match =
-      position[0] === correctPosition[0] && position[1] === correctPosition[1]
-    setMatch(match)
-    if (position[0] && position[1]) update(position[1] / 50, position[0] / 50)
-    if (match) celebrate()
+    checkMatch()
+  }, [])
+
+  useEffect(() => {
+    checkMatch()
+    if (position[0] && position[1]) {
+      update(position[1] / 50, position[0] / 50)
+    }
   }, [position])
+
+  const checkMatch = () => {
+    let match: boolean
+    if (position.length) {
+      match =
+        position[0] === correctPosition[0] && position[1] === correctPosition[1]
+      if (match) celebrate()
+    } else {
+      match =
+        startX * 50 === correctPosition[0] && startY * 50 === correctPosition[1]
+    }
+    setMatch(match)
+    return match
+  }
 
   const handleStop = (e: DraggableEvent, data: DraggableData) => {
     const { lastX, lastY } = data

@@ -35,9 +35,7 @@ const GameDisplay = () => {
   }, [])
 
   useEffect(() => {
-    console.log('changed saved state', savedState)
     if (savedState.length) {
-      console.log('saving state')
       window.localStorage.setItem('gameData', JSON.stringify(savedState))
     }
   }, [savedState])
