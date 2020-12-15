@@ -85,7 +85,7 @@ const GameDisplay = () => {
       <Heading py={25}>Kai's Periodic Table Game</Heading>
       <Box w={950} h={800} position='relative'>
         <Guide margin='auto' top={0} />
-        {tiles.length &&
+        {tiles.length > 0 &&
           tiles.map((t) => {
             return (
               <GameTile
