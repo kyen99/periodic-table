@@ -20,7 +20,7 @@ const GameTile = ({ element, startX, startY, celebrate, update, ...rest }) => {
     }
   }, [position])
 
-  const checkMatch = () => {
+  const checkMatch = (): void => {
     let match: boolean
     if (position.length) {
       match =
@@ -31,10 +31,9 @@ const GameTile = ({ element, startX, startY, celebrate, update, ...rest }) => {
         startX * 50 === correctPosition[0] && startY * 50 === correctPosition[1]
     }
     setMatch(match)
-    return match
   }
 
-  const handleStop = (e: DraggableEvent, data: DraggableData) => {
+  const handleStop = (e: DraggableEvent, data: DraggableData): void => {
     const { lastX, lastY } = data
     const { offsetLeft, offsetTop } = data.node
     setPosition([offsetLeft + lastX, offsetTop + lastY])
