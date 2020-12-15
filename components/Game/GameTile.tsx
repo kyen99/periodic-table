@@ -40,6 +40,7 @@ const GameTile = ({ element, startX, startY, celebrate, update, ...rest }) => {
     setPosition([offsetLeft + lastX, offsetTop + lastY])
     setActive(false)
   }
+
   return (
     <Draggable
       grid={[50, 50]}
