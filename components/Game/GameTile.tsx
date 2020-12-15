@@ -1,13 +1,13 @@
-import { memo, useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Draggable, { DraggableData, DraggableEvent } from 'react-draggable'
 import Element from '../PeriodicTable/Element'
 
 const GameTile = ({ element, startX, startY, celebrate, update, ...rest }) => {
   const { row, column } = element
-  const correctPosition = [parseInt(column) * 50, parseInt(row) * 50]
   const [active, setActive] = useState(false)
   const [position, setPosition] = useState([])
   const [match, setMatch] = useState(false)
+  const correctPosition = [parseInt(column) * 50, parseInt(row) * 50]
 
   useEffect(() => {
     checkMatch()
