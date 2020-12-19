@@ -1,0 +1,1085 @@
+{
+    "title": "Periodic Table",
+    "elements": {
+      "H": {
+        "symbol": "H",
+        "name": "Hydrogen",
+        "mass": "1.01",
+        "number": 1,
+        "row": "1",
+        "column": "1",
+        "color": "blue.400"
+      },
+      "He": {
+        "symbol": "He",
+        "name": "Helium",
+        "mass": 4.0026022,
+        "number": 2,
+        "row": "1",
+        "column": "18",
+        "color": "#9400d3"
+      },
+      "Li": {
+        "symbol": "Li",
+        "name": "Lithium",
+        "mass": 6.94,
+        "number": 3,
+        "row": "2",
+        "column": "1",
+        "color": "red.300"
+      },
+      "Be": {
+        "symbol": "Be",
+        "name": "Beryllium",
+        "mass": 9.01218315,
+        "number": 4,
+        "row": "2",
+        "column": "2",
+        "color": "orange.300"
+      },
+      "B": {
+        "symbol": "B",
+        "name": "Boron",
+        "mass": 10.81,
+        "number": 5,
+        "row": "2",
+        "column": "13",
+        "color": "cyan.200"
+      },
+      "C": {
+        "symbol": "C",
+        "name": "Carbon",
+        "mass": 12.011,
+        "number": 6,
+        "row": "2",
+        "column": "14",
+        "color": "blue.400"
+      },
+      "N": {
+        "symbol": "N",
+        "name": "Nitrogen",
+        "mass": 14.007,
+        "number": 7,
+        "row": "2",
+        "column": "15",
+        "color": "blue.400"
+      },
+      "O": {
+        "symbol": "O",
+        "name": "Oxygen",
+        "mass": 15.999,
+        "number": 8,
+        "row": "2",
+        "column": "16",
+        "color": "blue.400"
+      },
+      "F": {
+        "symbol": "F",
+        "name": "Fluorine",
+        "mass": 18.9984031636,
+        "number": 9,
+        "row": "2",
+        "column": "17",
+        "color": "#8b008b"
+      },
+      "Ne": {
+        "symbol": "Ne",
+        "name": "Neon",
+        "mass": 20.17976,
+        "number": 10,
+        "row": "2",
+        "column": "18",
+        "color": "#9400d3"
+      },
+      "Na": {
+        "symbol": "Na",
+        "name": "Sodium",
+        "mass": 22.989769282,
+        "number": 11,
+        "row": "3",
+        "column": "1",
+        "color": "red.300"
+      },
+      "Mg": {
+        "symbol": "Mg",
+        "name": "Magnesium",
+        "mass": 24.305,
+        "number": 12,
+        "row": "3",
+        "column": "2",
+        "color": "orange.300"
+      },
+      "Al": {
+        "symbol": "Al",
+        "name": "Aluminium",
+        "mass": 26.98153857,
+        "number": 13,
+        "row": "3",
+        "column": "13",
+        "color": "green.600"
+      },
+      "Si": {
+        "symbol": "Si",
+        "name": "Silicon",
+        "mass": 28.085,
+        "number": 14,
+        "row": "3",
+        "column": "14",
+        "color": "cyan.200"
+      },
+      "P": {
+        "symbol": "P",
+        "name": "Phosphorus",
+        "mass": 30.9737619985,
+        "number": 15,
+        "row": "3",
+        "column": "15",
+        "color": "blue.400"
+      },
+      "S": {
+        "symbol": "S",
+        "name": "Sulfur",
+        "mass": 32.06,
+        "number": 16,
+        "row": "3",
+        "column": "16",
+        "color": "blue.400"
+      },
+      "Cl": {
+        "symbol": "Cl",
+        "name": "Chlorine",
+        "mass": 35.45,
+        "number": 17,
+        "row": "3",
+        "column": "17",
+        "color": "#8b008b"
+      },
+      "Ar": {
+        "symbol": "Ar",
+        "name": "Argon",
+        "mass": 39.9481,
+        "number": 18,
+        "row": "3",
+        "column": "18",
+        "color": "#9400d3"
+      },
+      "K": {
+        "symbol": "K",
+        "name": "Potassium",
+        "mass": 39.09831,
+        "number": 19,
+        "row": "4",
+        "column": "1",
+        "color": "red.300"
+      },
+      "Ca": {
+        "symbol": "Ca",
+        "name": "Calcium",
+        "mass": 40.0784,
+        "number": 20,
+        "row": "4",
+        "column": "2",
+        "color": "orange.300"
+      },
+      "Sc": {
+        "symbol": "Sc",
+        "name": "Scandium",
+        "mass": 44.9559085,
+        "number": 21,
+        "row": "4",
+        "column": "3",
+        "color": "yellow.200"
+      },
+      "Ti": {
+        "symbol": "Ti",
+        "name": "Titanium",
+        "mass": 47.8671,
+        "number": 22,
+        "row": "4",
+        "column": "4",
+        "color": "yellow.200"
+      },
+      "V": {
+        "symbol": "V",
+        "name": "Vanadium",
+        "mass": 50.94151,
+        "number": 23,
+        "row": "4",
+        "column": "5",
+        "color": "yellow.200"
+      },
+      "Cr": {
+        "symbol": "Cr",
+        "name": "Chromium",
+        "mass": 51.99616,
+        "number": 24,
+        "row": "4",
+        "column": "6",
+        "color": "yellow.200"
+      },
+      "Mn": {
+        "symbol": "Mn",
+        "name": "Manganese",
+        "mass": 54.9380443,
+        "number": 25,
+        "row": "4",
+        "column": "7",
+        "color": "yellow.200"
+      },
+      "Fe": {
+        "symbol": "Fe",
+        "name": "Iron",
+        "mass": 55.8452,
+        "number": 26,
+        "row": "4",
+        "column": "8",
+        "color": "yellow.200"
+      },
+      "Co": {
+        "symbol": "Co",
+        "name": "Cobalt",
+        "mass": 58.9331944,
+        "number": 27,
+        "row": "4",
+        "column": "9",
+        "color": "yellow.200"
+      },
+      "Ni": {
+        "symbol": "Ni",
+        "name": "Nickel",
+        "mass": 58.69344,
+        "number": 28,
+        "row": "4",
+        "column": "10",
+        "color": "yellow.200"
+      },
+      "Cu": {
+        "symbol": "Cu",
+        "name": "Copper",
+        "mass": 63.5463,
+        "number": 29,
+        "row": "4",
+        "column": "11",
+        "color": "yellow.200"
+      },
+      "Zn": {
+        "symbol": "Zn",
+        "name": "Zinc",
+        "mass": 65.382,
+        "number": 30,
+        "row": "4",
+        "column": "12",
+        "color": "yellow.200"
+      },
+      "Ga": {
+        "symbol": "Ga",
+        "name": "Gallium",
+        "mass": 69.7231,
+        "number": 31,
+        "row": "4",
+        "column": "13",
+        "color": "green.600"
+      },
+      "Ge": {
+        "symbol": "Ge",
+        "name": "Germanium",
+        "mass": 72.6308,
+        "number": 32,
+        "row": "4",
+        "column": "14",
+        "color": "cyan.200"
+      },
+      "As": {
+        "symbol": "As",
+        "name": "Arsenic",
+        "mass": 74.9215956,
+        "number": 33,
+        "row": "4",
+        "column": "15",
+        "color": "cyan.200"
+      },
+      "Se": {
+        "symbol": "Se",
+        "name": "Selenium",
+        "mass": 78.9718,
+        "number": 34,
+        "row": "4",
+        "column": "16",
+        "color": "blue.400"
+      },
+      "Br": {
+        "symbol": "Br",
+        "name": "Bromine",
+        "mass": 79.904,
+        "number": 35,
+        "row": "4",
+        "column": "17",
+        "color": "#8b008b"
+      },
+      "Kr": {
+        "symbol": "Kr",
+        "name": "Krypton",
+        "mass": 83.7982,
+        "number": 36,
+        "row": "4",
+        "column": "18",
+        "color": "#9400d3"
+      },
+      "Rb": {
+        "symbol": "Rb",
+        "name": "Rubidium",
+        "mass": 85.46783,
+        "number": 37,
+        "row": "5",
+        "column": "1",
+        "color": "red.300"
+      },
+      "Sr": {
+        "symbol": "Sr",
+        "name": "Strontium",
+        "mass": 87.621,
+        "number": 38,
+        "row": "5",
+        "column": "2",
+        "color": "orange.300"
+      },
+      "Y": {
+        "symbol": "Y",
+        "name": "Yttrium",
+        "mass": 88.905842,
+        "number": 39,
+        "row": "5",
+        "column": "3",
+        "color": "yellow.200"
+      },
+      "Zr": {
+        "symbol": "Zr",
+        "name": "Zirconium",
+        "mass": 91.2242,
+        "number": 40,
+        "row": "5",
+        "column": "4",
+        "color": "yellow.200"
+      },
+      "Nb": {
+        "symbol": "Nb",
+        "name": "Niobium",
+        "mass": 92.906372,
+        "number": 41,
+        "row": "5",
+        "column": "5",
+        "color": "yellow.200"
+      },
+      "Mo": {
+        "symbol": "Mo",
+        "name": "Molybdenum",
+        "mass": 95.951,
+        "number": 42,
+        "row": "5",
+        "column": "6",
+        "color": "yellow.200"
+      },
+      "Tc": {
+        "symbol": "Tc",
+        "name": "Technetium",
+        "mass": 98,
+        "number": 43,
+        "row": "5",
+        "column": "7",
+        "color": "yellow.200"
+      },
+      "Ru": {
+        "symbol": "Ru",
+        "name": "Ruthenium",
+        "mass": 101.072,
+        "number": 44,
+        "row": "5",
+        "column": "8",
+        "color": "yellow.200"
+      },
+      "Rh": {
+        "symbol": "Rh",
+        "name": "Rhodium",
+        "mass": 102.905502,
+        "number": 45,
+        "row": "5",
+        "column": "9",
+        "color": "yellow.200"
+      },
+      "Pd": {
+        "symbol": "Pd",
+        "name": "Palladium",
+        "mass": 106.421,
+        "number": 46,
+        "row": "5",
+        "column": "10",
+        "color": "yellow.200"
+      },
+      "Ag": {
+        "symbol": "Ag",
+        "name": "Silver",
+        "mass": 107.86822,
+        "number": 47,
+        "row": "5",
+        "column": "11",
+        "color": "yellow.200"
+      },
+      "Cd": {
+        "symbol": "Cd",
+        "name": "Cadmium",
+        "mass": 112.4144,
+        "number": 48,
+        "row": "5",
+        "column": "12",
+        "color": "yellow.200"
+      },
+      "In": {
+        "symbol": "In",
+        "name": "Indium",
+        "mass": 114.8181,
+        "number": 49,
+        "row": "5",
+        "column": "13",
+        "color": "green.600"
+      },
+      "Sn": {
+        "symbol": "Sn",
+        "name": "Tin",
+        "mass": 118.7107,
+        "number": 50,
+        "row": "5",
+        "column": "14",
+        "color": "green.600"
+      },
+      "Sb": {
+        "symbol": "Sb",
+        "name": "Antimony",
+        "mass": 121.7601,
+        "number": 51,
+        "row": "5",
+        "column": "15",
+        "color": "cyan.200"
+      },
+      "Te": {
+        "symbol": "Te",
+        "name": "Tellurium",
+        "mass": 127.603,
+        "number": 52,
+        "row": "5",
+        "column": "16",
+        "color": "cyan.200"
+      },
+      "I": {
+        "symbol": "I",
+        "name": "Iodine",
+        "mass": 126.904473,
+        "number": 53,
+        "row": "5",
+        "column": "17",
+        "color": "#8b008b"
+      },
+      "Xe": {
+        "symbol": "Xe",
+        "name": "Xenon",
+        "mass": 131.2936,
+        "number": 54,
+        "row": "5",
+        "column": "18",
+        "color": "#9400d3"
+      },
+      "Cs": {
+        "symbol": "Cs",
+        "name": "Cesium",
+        "mass": 132.905451966,
+        "number": 55,
+        "row": "6",
+        "column": "1",
+        "color": "red.300"
+      },
+      "Ba": {
+        "symbol": "Ba",
+        "name": "Barium",
+        "mass": 137.3277,
+        "number": 56,
+        "row": "6",
+        "column": "2",
+        "color": "orange.300"
+      },
+      "La": {
+        "symbol": "La",
+        "name": "Lanthanum",
+        "mass": 138.905477,
+        "number": 57,
+        "row": "9",
+        "column": "3",
+        "color": "green.300"
+      },
+      "Ce": {
+        "symbol": "Ce",
+        "name": "Cerium",
+        "mass": 140.1161,
+        "number": 58,
+        "row": "9",
+        "column": "4",
+        "color": "green.300"
+      },
+      "Pr": {
+        "symbol": "Pr",
+        "name": "Praseodymium",
+        "mass": 140.907662,
+        "number": 59,
+        "row": "9",
+        "column": "5",
+        "color": "green.300"
+      },
+      "Nd": {
+        "symbol": "Nd",
+        "name": "Neodymium",
+        "mass": 144.2423,
+        "number": 60,
+        "row": "9",
+        "column": "6",
+        "color": "green.300"
+      },
+      "Pm": {
+        "symbol": "Pm",
+        "name": "Promethium",
+        "mass": 145,
+        "number": 61,
+        "row": "9",
+        "column": "7",
+        "color": "green.300"
+      },
+      "Sm": {
+        "symbol": "Sm",
+        "name": "Samarium",
+        "mass": 150.362,
+        "number": 62,
+        "row": "9",
+        "column": "8",
+        "color": "green.300"
+      },
+      "Eu": {
+        "symbol": "Eu",
+        "name": "Europium",
+        "mass": 151.9641,
+        "number": 63,
+        "row": "9",
+        "column": "9",
+        "color": "green.300"
+      },
+      "Gd": {
+        "symbol": "Gd",
+        "name": "Gadolinium",
+        "mass": 157.253,
+        "number": 64,
+        "row": "9",
+        "column": "10",
+        "color": "green.300"
+      },
+      "Tb": {
+        "symbol": "Tb",
+        "name": "Terbium",
+        "mass": 158.925352,
+        "number": 65,
+        "row": "9",
+        "column": "11",
+        "color": "green.300"
+      },
+      "Dy": {
+        "symbol": "Dy",
+        "name": "Dysprosium",
+        "mass": 162.5001,
+        "number": 66,
+        "row": "9",
+        "column": "12",
+        "color": "green.300"
+      },
+      "Ho": {
+        "symbol": "Ho",
+        "name": "Holmium",
+        "mass": 164.930332,
+        "number": 67,
+        "row": "9",
+        "column": "13",
+        "color": "green.300"
+      },
+      "Er": {
+        "symbol": "Er",
+        "name": "Erbium",
+        "mass": 167.2593,
+        "number": 68,
+        "row": "9",
+        "column": "14",
+        "color": "green.300"
+      },
+      "Tm": {
+        "symbol": "Tm",
+        "name": "Thulium",
+        "mass": 168.934222,
+        "number": 69,
+        "row": "9",
+        "column": "15",
+        "color": "green.300"
+      },
+      "Yb": {
+        "symbol": "Yb",
+        "name": "Ytterbium",
+        "mass": 173.0451,
+        "number": 70,
+        "row": "9",
+        "column": "16",
+        "color": "green.300"
+      },
+      "Lu": {
+        "symbol": "Lu",
+        "name": "Lutetium",
+        "mass": 174.96681,
+        "number": 71,
+        "row": "9",
+        "column": "17",
+        "color": "green.300"
+      },
+      "Hf": {
+        "symbol": "Hf",
+        "name": "Hafnium",
+        "mass": 178.492,
+        "number": 72,
+        "row": "6",
+        "column": "4",
+        "color": "yellow.200"
+      },
+      "Ta": {
+        "symbol": "Ta",
+        "name": "Tantalum",
+        "mass": 180.947882,
+        "number": 73,
+        "row": "6",
+        "column": "5",
+        "color": "yellow.200"
+      },
+      "W": {
+        "symbol": "W",
+        "name": "Tungsten",
+        "mass": 183.841,
+        "number": 74,
+        "row": "6",
+        "column": "6",
+        "color": "yellow.200"
+      },
+      "Re": {
+        "symbol": "Re",
+        "name": "Rhenium",
+        "mass": 186.2071,
+        "number": 75,
+        "row": "6",
+        "column": "7",
+        "color": "yellow.200"
+      },
+      "Os": {
+        "symbol": "Os",
+        "name": "Osmium",
+        "mass": 190.233,
+        "number": 76,
+        "row": "6",
+        "column": "8",
+        "color": "yellow.200"
+      },
+      "Ir": {
+        "symbol": "Ir",
+        "name": "Iridium",
+        "mass": 192.2173,
+        "number": 77,
+        "row": "6",
+        "column": "9",
+        "color": "yellow.200"
+      },
+      "Pt": {
+        "symbol": "Pt",
+        "name": "Platinum",
+        "mass": 195.0849,
+        "number": 78,
+        "row": "6",
+        "column": "10",
+        "color": "yellow.200"
+      },
+      "Au": {
+        "symbol": "Au",
+        "name": "Gold",
+        "mass": 196.9665695,
+        "number": 79,
+        "row": "6",
+        "column": "11",
+        "color": "yellow.200"
+      },
+      "Hg": {
+        "symbol": "Hg",
+        "name": "Mercury",
+        "mass": 200.5923,
+        "number": 80,
+        "row": "6",
+        "column": "12",
+        "color": "yellow.200"
+      },
+      "Tl": {
+        "symbol": "Tl",
+        "name": "Thallium",
+        "mass": 204.38,
+        "number": 81,
+        "row": "6",
+        "column": "13",
+        "color": "green.600"
+      },
+      "Pb": {
+        "symbol": "Pb",
+        "name": "Lead",
+        "mass": 207.21,
+        "number": 82,
+        "row": "6",
+        "column": "14",
+        "color": "green.600"
+      },
+      "Bi": {
+        "symbol": "Bi",
+        "name": "Bismuth",
+        "mass": 208.980401,
+        "number": 83,
+        "row": "6",
+        "column": "15",
+        "color": "green.600"
+      },
+      "Po": {
+        "symbol": "Po",
+        "name": "Polonium",
+        "mass": 209,
+        "number": 84,
+        "row": "6",
+        "column": "16",
+        "color": "cyan.200"
+      },
+      "At": {
+        "symbol": "At",
+        "name": "Astatine",
+        "mass": 210,
+        "number": 85,
+        "row": "6",
+        "column": "17",
+        "color": "#8b008b"
+      },
+      "Rn": {
+        "symbol": "Rn",
+        "name": "Radon",
+        "mass": 222,
+        "number": 86,
+        "row": "6",
+        "column": "18",
+        "color": "#9400d3"
+      },
+      "Fr": {
+        "symbol": "Fr",
+        "name": "Francium",
+        "mass": 223,
+        "number": 87,
+        "row": "7",
+        "column": "1",
+        "color": "red.300"
+      },
+      "Ra": {
+        "symbol": "Ra",
+        "name": "Radium",
+        "mass": 226,
+        "number": 88,
+        "row": "7",
+        "column": "2",
+        "color": "orange.300"
+      },
+      "Ac": {
+        "symbol": "Ac",
+        "name": "Actinium",
+        "mass": 227,
+        "number": 89,
+        "row": "10",
+        "column": "3",
+        "color": "green.500"
+      },
+      "Th": {
+        "symbol": "Th",
+        "name": "Thorium",
+        "mass": 232.03774,
+        "number": 90,
+        "row": "10",
+        "column": "4",
+        "color": "green.500"
+      },
+      "Pa": {
+        "symbol": "Pa",
+        "name": "Protactinium",
+        "mass": 231.035882,
+        "number": 91,
+        "row": "10",
+        "column": "5",
+        "color": "green.500"
+      },
+      "U": {
+        "symbol": "U",
+        "name": "Uranium",
+        "mass": 238.028913,
+        "number": 92,
+        "row": "10",
+        "column": "6",
+        "color": "green.500"
+      },
+      "Np": {
+        "symbol": "Np",
+        "name": "Neptunium",
+        "mass": 237,
+        "number": 93,
+        "row": "10",
+        "column": "7",
+        "color": "green.500"
+      },
+      "Pu": {
+        "symbol": "Pu",
+        "name": "Plutonium",
+        "mass": 244,
+        "number": 94,
+        "row": "10",
+        "column": "8",
+        "color": "green.500"
+      },
+      "Am": {
+        "symbol": "Am",
+        "name": "Americium",
+        "mass": 243,
+        "number": 95,
+        "row": "10",
+        "column": "9",
+        "color": "green.500"
+      },
+      "Cm": {
+        "symbol": "Cm",
+        "name": "Curium",
+        "mass": 247,
+        "number": 96,
+        "row": "10",
+        "column": "10",
+        "color": "green.500"
+      },
+      "Bk": {
+        "symbol": "Bk",
+        "name": "Berkelium",
+        "mass": 247,
+        "number": 97,
+        "row": "10",
+        "column": "11",
+        "color": "green.500"
+      },
+      "Cf": {
+        "symbol": "Cf",
+        "name": "Californium",
+        "mass": 251,
+        "number": 98,
+        "row": "10",
+        "column": "12",
+        "color": "green.500"
+      },
+      "Es": {
+        "symbol": "Es",
+        "name": "Einsteinium",
+        "mass": 252,
+        "number": 99,
+        "row": "10",
+        "column": "13",
+        "color": "green.500"
+      },
+      "Fm": {
+        "symbol": "Fm",
+        "name": "Fermium",
+        "mass": 257,
+        "number": 100,
+        "row": "10",
+        "column": "14",
+        "color": "green.500"
+      },
+      "Md": {
+        "symbol": "Md",
+        "name": "Mendelevium",
+        "mass": 258,
+        "number": 101,
+        "row": "10",
+        "column": "15",
+        "color": "green.500"
+      },
+      "No": {
+        "symbol": "No",
+        "name": "Nobelium",
+        "mass": 259,
+        "number": 102,
+        "row": "10",
+        "column": "16",
+        "color": "green.500"
+      },
+      "Lr": {
+        "symbol": "Lr",
+        "name": "Lawrencium",
+        "mass": 266,
+        "number": 103,
+        "row": "10",
+        "column": "17",
+        "color": "green.500"
+      },
+      "Rf": {
+        "symbol": "Rf",
+        "name": "Rutherfordium",
+        "mass": 267,
+        "number": 104,
+        "row": "7",
+        "column": "4",
+        "color": "yellow.200"
+      },
+      "Db": {
+        "symbol": "Db",
+        "name": "Dubnium",
+        "mass": 268,
+        "number": 105,
+        "row": "7",
+        "column": "5",
+        "color": "yellow.200"
+      },
+      "Sg": {
+        "symbol": "Sg",
+        "name": "Seaborgium",
+        "mass": 269,
+        "number": 106,
+        "row": "7",
+        "column": "6",
+        "color": "yellow.200"
+      },
+      "Bh": {
+        "symbol": "Bh",
+        "name": "Bohrium",
+        "mass": 270,
+        "number": 107,
+        "row": "7",
+        "column": "7",
+        "color": "yellow.200"
+      },
+      "Hs": {
+        "symbol": "Hs",
+        "name": "Hassium",
+        "mass": 269,
+        "number": 108,
+        "row": "7",
+        "column": "8",
+        "color": "yellow.200"
+      },
+      "Mt": {
+        "symbol": "Mt",
+        "name": "Meitnerium",
+        "mass": 278,
+        "number": 109,
+        "row": "7",
+        "column": "9",
+        "color": "yellow.200"
+      },
+      "Ds": {
+        "symbol": "Ds",
+        "name": "Darmstadtium",
+        "mass": 281,
+        "number": 110,
+        "row": "7",
+        "column": "10",
+        "color": "yellow.200"
+      },
+      "Rg": {
+        "symbol": "Rg",
+        "name": "Roentgenium",
+        "mass": 282,
+        "number": 111,
+        "row": "7",
+        "column": "11",
+        "color": "yellow.200"
+      },
+      "Cn": {
+        "symbol": "Cn",
+        "name": "Copernicium",
+        "mass": 285,
+        "number": 112,
+        "row": "7",
+        "column": "12",
+        "color": "yellow.200"
+      },
+      "Nh": {
+        "symbol": "Nh",
+        "name": "Nihonium",
+        "mass": 286,
+        "number": 113,
+        "row": "7",
+        "column": "13",
+        "color": "green.600"
+      },
+      "Fl": {
+        "symbol": "Fl",
+        "name": "Flerovium",
+        "mass": 289,
+        "number": 114,
+        "row": "7",
+        "column": "14",
+        "color": "green.600"
+      },
+      "Mc": {
+        "symbol": "Mc",
+        "name": "Moscovium",
+        "mass": 289,
+        "number": 115,
+        "row": "7",
+        "column": "15",
+        "color": "green.600"
+      },
+      "Lv": {
+        "symbol": "Lv",
+        "name": "Livermorium",
+        "mass": 293,
+        "number": 116,
+        "row": "7",
+        "column": "16",
+        "color": "green.600"
+      },
+      "Ts": {
+        "symbol": "Ts",
+        "name": "Tennessine",
+        "mass": 294,
+        "number": 117,
+        "row": "7",
+        "column": "17",
+        "color": "#8b008b"
+      },
+      "Og": {
+        "symbol": "Og",
+        "name": "Oganesson",
+        "mass": 294,
+        "number": 118,
+        "row": "7",
+        "column": "18",
+        "color": "#9400d3"
+      },
+      " 57-71": {
+        "symbol": " 57-71",
+        "number": "",
+        "row": "6",
+        "column": "3",
+        "name": "Lanthanides",
+        "mass": "",
+        "color": "green.300"
+      },
+      "  89-103": {
+        "symbol": "  89-103",
+        "number": "",
+        "row": "7",
+        "column": "3",
+        "name": "Actinides",
+        "mass": "",
+        "color": "green.500"
+      }
+    }
+  }
