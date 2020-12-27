@@ -27,31 +27,36 @@ const GameTile = ({ element, startX, startY, celebrate, update, ...rest }) => {
         position[0] === correctPosition[0] && position[1] === correctPosition[1]
       if (match) celebrate()
     } else {
+      // Math.floor fixes rounding error on low res displays
       match =
-        startX * 50 === correctPosition[0] && startY * 50 === correctPosition[1]
+        Math.floor(startX) * 50 === correctPosition[0] &&
+        Math.floor(startY) * 50 === correctPosition[1]
     }
     setMatch(match)
   }
 
+  // Rounds pixels to fix rounding error on low res screens
+  const roundTens = (number: number) => Math.floor(number / 10) * 10
+
   const handleStop = (e: DraggableEvent, data: DraggableData): void => {
     const { lastX, lastY } = data
     const { offsetLeft, offsetTop } = data.node
-    setPosition([offsetLeft + lastX, offsetTop + lastY])
+    setPosition([roundTens(offsetLeft + lastX), roundTens(offsetTop + lastY)])
     setActive(false)
   }
 
   return (
     <Draggable
       grid={[50, 50]}
-      bounds='parent'
+      bounds="parent"
       onStart={() => setActive(true)}
       onStop={handleStop}
     >
       <Element
         element={element}
         zoom={false}
-        position='absolute'
-        cursor='pointer'
+        position="absolute"
+        cursor="pointer"
         opacity={match ? 1 : 0.6}
         top={startY * 50}
         left={startX * 50}
