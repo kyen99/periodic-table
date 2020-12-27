@@ -12,6 +12,7 @@
     "@emotion/react": "^11.1.1",
     "@emotion/styled": "^11.0.0",
     "@monaco-editor/react": "^3.7.1",
+    "date-fns": "^2.16.1",
     "fireworks-canvas": "^2.5.0",
     "framer-motion": "^2.9.4",
     "next": "10.0.3",
