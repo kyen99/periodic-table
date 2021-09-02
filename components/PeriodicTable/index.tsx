@@ -25,23 +25,24 @@ const PeriodicTable = ({ data, setData, setShowCelebration, ...props }) => {
   const { title } = data
   const [showGuide, setShowGuide] = useState(true)
   return (
-    <Box {...props} h='100vh' w='100%'>
-      <Flex justify='space-between'>
+    <Box {...props} h="100vh" w="100%">
+      <Flex justify="space-between">
         <Heading fontSize={36} minH={54}>
           {title}
         </Heading>
         <Progress
           count={Object.keys(data.elements).length}
           setShowCelebration={setShowCelebration}
+          elementCount={data?.elementCount || 120}
         />
       </Flex>
-      <Flex justifyContent='space-between' mt={8}>
-        <Box position='relative' minH={550} mt={50} w={950}>
+      <Flex justifyContent="space-between" mt={8}>
+        <Box position="relative" minH={550} mt={50} w={950}>
           <Box ml={50}>
             {rows.map((_, idx) => {
               const { elements } = data
               return (
-                <Grid key={idx} templateColumns='repeat(18, 1fr)' height={50}>
+                <Grid key={idx} templateColumns="repeat(18, 1fr)" height={50}>
                   {Object.keys(elements)
                     .filter((e) => elements[e].row === (idx + 1).toString())
                     .map((e) => (
@@ -55,15 +56,15 @@ const PeriodicTable = ({ data, setData, setShowCelebration, ...props }) => {
             })}
           </Box>
           {showGuide && <Guide />}
-          <Flex my={5} justifyContent='flex-end'>
+          <Flex my={5} justifyContent="flex-end">
             <Button
-              className='no-print'
+              className="no-print"
               onClick={() => setShowGuide(!showGuide)}
             >
               Toggle Grid
             </Button>
           </Flex>
-          <Tabs class='no-print'>
+          <Tabs class="no-print">
             <TabList>
               <Tab>Element Words</Tab>
               <Tab>View Code</Tab>

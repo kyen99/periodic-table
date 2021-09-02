@@ -18,7 +18,7 @@ const BathTime = () => {
       setCurrentTime(new Date())
       setTime(
         differenceInSeconds(
-          set(new Date(), { hours: 22, minutes: 30, seconds: 0 }),
+          set(new Date(), { hours: 19, minutes: 30, seconds: 0 }),
           new Date()
         )
       )
