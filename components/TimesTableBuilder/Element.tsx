@@ -9,19 +9,19 @@ const Element = ({
   element: iElement
   zoom?: boolean
 }) => {
-  const { row, column, number } = element
+  const { row, column, number, color } = element
   return (
     <Flex
       as={motion.div}
       key={`${row}-${column}`}
       direction="column"
       justify="space-around"
+      bgColor={color}
       align="center"
       py={2}
       w="50px"
       h="50px"
       border="1px solid #000"
-      bgColor={'white'}
       gridColumnStart={parseInt(column)}
       order={parseInt(column)}
       position="relative"

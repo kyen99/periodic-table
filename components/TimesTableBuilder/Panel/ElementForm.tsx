@@ -7,6 +7,7 @@ import {
   Grid,
   GridItem,
   Heading,
+  Select,
   Text,
 } from '@chakra-ui/react'
 
@@ -62,7 +63,7 @@ const ElementForm = ({ form, setForm, setData, ...rest }) => {
               onChange={(e) => setForm({ ...form, number: e.target.value })}
             />
           </GridItem>
-          {/* <GridItem colSpan={2}>
+          <GridItem colSpan={2}>
             <Text>Color</Text>
             <Select
               name="color"
@@ -83,7 +84,7 @@ const ElementForm = ({ form, setForm, setData, ...rest }) => {
               <option value="red.300">Red</option>
               <option value="yellow.200">Yellow</option>
             </Select>
-          </GridItem> */}
+          </GridItem>
 
           <Button colorScheme="blue" type="submit">
             Save
