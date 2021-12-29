@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Guide from '../PeriodicTable/Guide'
 import elements from './elements.json'
 import GameTile from './GameTile'
+import Navbar from '../../components/navbar'
 
 const rows = Array(11).fill(0)
 const cols = Array(18).fill(0)
@@ -67,24 +68,24 @@ const GameDisplay = () => {
     }, 2000)
   }
 
-  const updateSavedState = (symbol: string) => (
-    row: number,
-    column: number
-  ): void => {
-    setSavedState(
-      savedState.map((tile) => {
-        if (tile.symbol.toLowerCase() === symbol.toLowerCase())
-          return { ...tile, rRow: row, rColumn: column }
-        return tile
-      })
-    )
-  }
+  const updateSavedState =
+    (symbol: string) =>
+    (row: number, column: number): void => {
+      setSavedState(
+        savedState.map((tile) => {
+          if (tile.symbol.toLowerCase() === symbol.toLowerCase())
+            return { ...tile, rRow: row, rColumn: column }
+          return tile
+        })
+      )
+    }
 
   return (
-    <Flex align='center' direction='column' h='100vh' postion='relative'>
+    <Flex align="center" direction="column" h="100vh" postion="relative">
+      <Navbar />
       <Heading py={25}>Kai's Periodic Table Game</Heading>
-      <Box w={950} h={800} position='relative'>
-        <Guide margin='auto' top={0} />
+      <Box w={950} h={800} position="relative">
+        <Guide margin="auto" top={0} />
         {tiles.length > 0 &&
           tiles.map((t) => {
             return (
@@ -99,20 +100,20 @@ const GameDisplay = () => {
             )
           })}
       </Box>
-      <Flex p={25} justify='space-between' gridGap={5}>
+      <Flex p={25} justify="space-between" gridGap={5}>
         <Button onClick={randomizeTiles}>Mix Tiles</Button>
-        <Link href='/'>
+        <Link href="/">
           <Button>Back to Builder</Button>
         </Link>
       </Flex>
       {celebrate && (
-        <Grid placeItems='center' position='absolute' w='100%' h='100%'>
+        <Grid placeItems="center" position="absolute" w="100%" h="100%">
           <Fade in={celebrate}>
-            <Text fontSize='15em' zIndex={1}>
+            <Text fontSize="15em" zIndex={1}>
               👍
             </Text>
           </Fade>
-          <Box position='absolute' w='100%' h='100%'></Box>
+          <Box position="absolute" w="100%" h="100%"></Box>
         </Grid>
       )}
     </Flex>

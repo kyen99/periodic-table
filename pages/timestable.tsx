@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { Box, Flex } from '@chakra-ui/react'
 import Panel from '../components/TimesTableBuilder/Panel'
 import TimesTableBuilder from '../components/TimesTableBuilder'
+import Navbar from '../components/navbar'
 import { formDefault } from '../components/TimesTableBuilder/Panel/ElementForm'
 
 const defaultData: iNumbers | null = {
@@ -37,6 +38,7 @@ export default function Home() {
         <title>Times Table Builder</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Navbar />
       <Flex>
         <Panel
           className="no-print"

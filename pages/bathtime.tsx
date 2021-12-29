@@ -9,6 +9,7 @@ import {
 import { useEffect, useState } from 'react'
 import set from 'date-fns/set'
 import differenceInSeconds from 'date-fns/differenceInSeconds'
+import Navbar from '../components/navbar'
 
 const BathTime = () => {
   const [time, setTime] = useState(null)
@@ -29,6 +30,7 @@ const BathTime = () => {
   }, [])
   return (
     <Grid placeItems="center" height="100vh">
+      <Navbar />
       <Stat transform="scale(4)">
         <StatLabel>Bath Time at 7:30pm</StatLabel>
         <StatNumber>

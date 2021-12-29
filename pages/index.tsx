@@ -4,6 +4,7 @@ import { Box, Flex } from '@chakra-ui/react'
 import Panel from '../components/Panel'
 import PeriodicTable from '../components/PeriodicTable'
 import Fireworks from '../components/Celebration'
+import Navbar from '../components/navbar'
 
 const defaultData: iData | null = { title: '', elements: {} }
 
@@ -26,19 +27,20 @@ export default function Home() {
   if (!data) return null
 
   return (
-    <Box height='100vh'>
+    <Box height="100vh">
       <Head>
         <title>Periodic Table Builder</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       {showCelebration && <Fireworks setShow={setShowCelebration} />}
+      <Navbar />
       <Flex>
         <Panel
-          className='no-print'
-          minW='350px'
+          className="no-print"
+          minW="350px"
           p={4}
-          bgColor='#ccc'
-          height='100vh'
+          bgColor="#ccc"
+          height="100vh"
           data={data}
           setData={setData}
           reset={handleReset}
