@@ -16,7 +16,7 @@ const Editor = ({ data, setData, ...rest }) => {
   const checkCode = () => {
     if (editorRef) {
       try {
-        JSON.parse(editorRef.current())
+        JSON.parse(editorRef.current.getValue())
         setIsValid(true)
       } catch (e) {
         setIsValid(false)
@@ -25,11 +25,11 @@ const Editor = ({ data, setData, ...rest }) => {
   }
 
   const handleSave = () => {
-    setData(JSON.parse(editorRef.current()))
+    setData(JSON.parse(editorRef.current.getValue()))
   }
 
-  const handleEditorDidMount = (_ref) => {
-    editorRef.current = _ref
+  function handleEditorDidMount(editor) {
+    editorRef.current = editor
   }
 
   return (
@@ -38,7 +38,7 @@ const Editor = ({ data, setData, ...rest }) => {
         height="80vh"
         language="json"
         value={JSON.stringify(data, null, 2)}
-        editorDidMount={handleEditorDidMount}
+        onMount={handleEditorDidMount}
         options={{ minimap: { enabled: false } }}
       />
       <Button disabled={!isValid} onClick={handleSave}>
