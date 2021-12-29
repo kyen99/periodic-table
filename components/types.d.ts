@@ -8,6 +8,17 @@ interface iElement {
   number: string
 }
 
+interface iPokemon {
+  plength: string
+  ptype: string
+  column: string
+  row: string
+  name: string
+  species: string
+  pweight: string
+  stage: string
+}
+
 interface iNumbers {
   title: string
   rows: number
