@@ -38,7 +38,7 @@ export default function Home() {
         <title>Times Table Builder</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
+      <Navbar selected="timestable" />
       <Flex>
         <Panel
           className="no-print"

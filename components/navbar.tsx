@@ -1,22 +1,54 @@
 import { Flex, Link } from '@chakra-ui/react'
 import NextLink from 'next/link'
 
-const NavLink = ({ href, title }) => (
-  <Flex mx="2">
+const NavLink = ({ href, title, ...rest }) => (
+  <Flex mx="2" {...rest}>
     <NextLink href={href} passHref>
       <Link>{title}</Link>
     </NextLink>
   </Flex>
 )
 
-const Navbar = () => {
+const Navbar = ({ selected, ...rest }) => {
   return (
-    <Flex h={50} flex={1} bgColor="gray.300" align="center" pl="4">
-      <NavLink href="/" title="Home" /> |
-      <NavLink href="/pokemon" title="Pokemon" /> |
-      <NavLink href="/game" title="Periodic Table Game" /> |
-      <NavLink href="/timestable" title="Times Table" /> |
-      <NavLink href="/bathtime" title="Bath Time" />
+    <Flex
+      minH={50}
+      flex={1}
+      bgColor="gray.300"
+      align="center"
+      pl="4"
+      w="100%"
+      {...rest}
+    >
+      <NavLink
+        href="/"
+        title="Home"
+        fontWeight={selected === 'home' ? 800 : 400}
+      />{' '}
+      |
+      <NavLink
+        href="/pokemon"
+        title="Pokemon"
+        fontWeight={selected === 'pokemon' ? 800 : 400}
+      />{' '}
+      |
+      <NavLink
+        href="/game"
+        title="Periodic Table Game"
+        fontWeight={selected === 'game' ? 800 : 400}
+      />{' '}
+      |
+      <NavLink
+        href="/timestable"
+        title="Times Table"
+        fontWeight={selected === 'timestable' ? 800 : 400}
+      />{' '}
+      |
+      <NavLink
+        href="/bathtime"
+        title="Bath Time"
+        fontWeight={selected === 'bathtime' ? 800 : 400}
+      />
     </Flex>
   )
 }

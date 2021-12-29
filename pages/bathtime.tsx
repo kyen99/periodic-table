@@ -1,4 +1,5 @@
 import {
+  Flex,
   Grid,
   Stat,
   StatLabel,
@@ -29,21 +30,23 @@ const BathTime = () => {
     }
   }, [])
   return (
-    <Grid placeItems="center" height="100vh">
-      <Navbar />
-      <Stat transform="scale(4)">
-        <StatLabel>Bath Time at 7:30pm</StatLabel>
-        <StatNumber>
-          in {Math.floor(time / 60 / 60)} hours
-          <br />
-          {Math.floor(time / 60)} minutes
-          <br />
-          {time % 60} seconds
-        </StatNumber>
-        <StatHelpText>{currentTime.toLocaleTimeString()}</StatHelpText>
-        <Progress hasStripe value={10800 - time} max={10800} />
-      </Stat>
-    </Grid>
+    <Flex direction="column">
+      <Navbar selected="bathtime" />
+      <Grid placeItems="center" height="100vh">
+        <Stat transform="scale(4)">
+          <StatLabel>Bath Time at 7:30pm</StatLabel>
+          <StatNumber>
+            in {Math.floor(time / 60 / 60)} hours
+            <br />
+            {Math.floor(time / 60)} minutes
+            <br />
+            {time % 60} seconds
+          </StatNumber>
+          <StatHelpText>{currentTime.toLocaleTimeString()}</StatHelpText>
+          <Progress hasStripe value={10800 - time} max={10800} />
+        </Stat>
+      </Grid>
+    </Flex>
   )
 }
 

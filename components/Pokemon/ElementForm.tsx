@@ -49,7 +49,7 @@ const ElementForm = ({ form, setForm, setData, ...rest }) => {
             <Text>Length</Text>
             <Input
               name="length"
-              w={16}
+              w={24}
               value={form.plength}
               bgColor="gray.100"
               onChange={(e) => setForm({ ...form, plength: e.target.value })}
@@ -59,7 +59,7 @@ const ElementForm = ({ form, setForm, setData, ...rest }) => {
             <Text>Weight</Text>
             <Input
               name="weight"
-              w={16}
+              w={24}
               value={form.pweight}
               bgColor="gray.100"
               onChange={(e) => setForm({ ...form, pweight: e.target.value })}

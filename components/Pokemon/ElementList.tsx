@@ -15,34 +15,24 @@ const ElementList = ({ elements, setForm, setData, scrollArea, ...rest }) => {
     <Stack mb={10} {...rest}>
       <Heading fontSize={24}>Elements</Heading>
       <Input
-        placeholder='symbol'
+        placeholder="name"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        bgColor='white'
+        bgColor="white"
       />
       {Object.keys(elements)
         .filter((e) => e.toLowerCase().match(search.toLowerCase()))
         .map((e) => (
-          <Flex key={e} justifyContent='space-between'>
-            <Text px={2} display='inline-block' bgColor={elements[e].color}>
+          <Flex key={e} justifyContent="space-between">
+            <Text px={2} display="inline-block" bgColor={elements[e].color}>
               {e}&nbsp;[{elements[e].row}, {elements[e].column}]
             </Text>
-            {elements[e].mass && (
-              <Text
-                display='inline'
-                bgColor='blue.400'
-                px={2}
-                textAlign='center'
-              >
-                {elements[e].mass}
-              </Text>
-            )}
             <Box>
               <Button
-                size='xs'
-                variant='outline'
+                size="xs"
+                variant="outline"
                 onClick={() => {
-                  setForm({ symbol: e, ...elements[e] })
+                  setForm({ name: e, ...elements[e] })
                   scrollArea.current.scrollTo(0, 0)
                 }}
               >
@@ -50,8 +40,8 @@ const ElementList = ({ elements, setForm, setData, scrollArea, ...rest }) => {
               </Button>
               &nbsp;
               <Button
-                size='xs'
-                variant='outline'
+                size="xs"
+                variant="outline"
                 onClick={() => {
                   delete elements[e]
                   setData((data) => ({ ...data, elements }))

@@ -32,7 +32,7 @@ export default function Home() {
         <title>Pokemon Builder</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
+      <Navbar selected="pokemon" />
       <Flex>
         <Panel
           className="no-print"

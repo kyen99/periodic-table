@@ -81,8 +81,14 @@ const GameDisplay = () => {
     }
 
   return (
-    <Flex align="center" direction="column" h="100vh" postion="relative">
-      <Navbar />
+    <Flex
+      align="center"
+      direction="column"
+      h="100vh"
+      postion="relative"
+      flex={1}
+    >
+      <Navbar selected="game" flex={1} />
       <Heading py={25}>Kai's Periodic Table Game</Heading>
       <Box w={950} h={800} position="relative">
         <Guide margin="auto" top={0} />

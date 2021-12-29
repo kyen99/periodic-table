@@ -33,7 +33,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {showCelebration && <Fireworks setShow={setShowCelebration} />}
-      <Navbar />
+      <Navbar selected="home" />
       <Flex>
         <Panel
           className="no-print"
