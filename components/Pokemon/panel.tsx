@@ -17,15 +17,6 @@ const Panel = ({ data, setData, reset, ...rest }) => {
           onChange={(e) => setData({ ...data, title: e.target.value })}
         />
       </Box>
-      <Box mb={10}>
-        <Heading fontSize={24}>Element count</Heading>
-        <Input
-          placeholder="Element Count"
-          value={data.elementCount}
-          bgColor="gray.100"
-          onChange={(e) => setData({ ...data, elementCount: e.target.value })}
-        />
-      </Box>
       <ElementForm form={form} setForm={setForm} setData={setData} mb={10} />
       <ElementList
         elements={data.elements}

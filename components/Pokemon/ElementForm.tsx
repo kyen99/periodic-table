@@ -27,7 +27,7 @@ const ElementForm = ({ form, setForm, setData, ...rest }) => {
     e.preventDefault()
     setData((data) => ({
       ...data,
-      elements: { ...data.elements, [form.symbol]: { ...form } },
+      elements: { ...data.elements, [form.name]: { ...form } },
     }))
     setForm(formDefault)
   }
