@@ -15,7 +15,6 @@ const defaultData: iNumbers | null = {
 
 export default function Home() {
   const [data, setData] = useState<iNumbers>(null)
-  const [showCelebration, setShowCelebration] = useState(false)
   const [form, setForm] = useState(formDefault)
 
   useEffect(() => {
@@ -56,7 +55,6 @@ export default function Home() {
           p={4}
           data={data}
           setData={setData}
-          setShowCelebration={setShowCelebration}
           w="100%"
           setForm={setForm}
         />

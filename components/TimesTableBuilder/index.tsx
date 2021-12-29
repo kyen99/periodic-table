@@ -15,32 +15,19 @@ import { useState } from 'react'
 import Element from './Element'
 import Guide from './Guide'
 import Editor from './Editor'
-import Progress from './ProgressArea'
 import Calculator from './Calculator'
 
-const PeriodicTable = ({
-  data,
-  setData,
-  setForm,
-  setShowCelebration,
-  ...props
-}) => {
+const PeriodicTable = ({ data, setData, setForm }) => {
   const { title } = data
   const rows = new Array(parseInt(data.rows || '0')).fill(1)
-  // const cols = new Array(parseInt(data.columns || '0')).fill(1)
   const [showGuide, setShowGuide] = useState(true)
   return (
     <Box w="100%">
-      <Flex justify="space-between">
+      <Flex justify="space-around">
         <Heading fontSize={36} minH={54}>
           {title}
         </Heading>
         <Calculator />
-        <Progress
-          count={Object.keys(data.elements).length}
-          setShowCelebration={setShowCelebration}
-          elementCount={0}
-        />
       </Flex>
       <Flex
         mt={8}

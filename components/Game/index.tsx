@@ -15,8 +15,8 @@ const GameDisplay = () => {
   const [celebrate, setCelebrate] = useState(false)
   const randomPositions = (() => {
     const positions = []
-    rows.forEach((_, rowI) => {
-      cols.forEach((_, colI) => {
+    rows.forEach((_i, rowI) => {
+      cols.forEach((_j, colI) => {
         positions.push([rowI + 1, colI + 1, Math.random()])
       })
     })

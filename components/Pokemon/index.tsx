@@ -19,11 +19,11 @@ import Editor from './Editor'
 
 const rows = new Array(11).fill(1)
 
-const PeriodicTable = ({ data, setData, setShowCelebration, ...props }) => {
+const PeriodicTable = ({ data, setData }) => {
   const { title } = data
   const [showGuide, setShowGuide] = useState(true)
   return (
-    <Box {...props} h="100vh" w="100%">
+    <Box h="100vh" w="100%">
       <Flex justify="space-between">
         <Heading fontSize={36} minH={54}>
           {title}
