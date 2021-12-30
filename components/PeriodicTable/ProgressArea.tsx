@@ -16,7 +16,7 @@ const ProgressArea = ({
   return (
     <Box w={300} {...rest}>
       {count < elementCount ? (
-        <Box class="no-print">
+        <Box className="no-print">
           <Heading fontSize={20}>
             Elements needed: {elementCount - count}
           </Heading>

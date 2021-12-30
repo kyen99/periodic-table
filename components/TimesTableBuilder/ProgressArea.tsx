@@ -1,7 +1,7 @@
 import { Box, Button, Heading, Progress } from '@chakra-ui/react'
 import Link from 'next/link'
 
-interface iProps {
+interface IProps {
   count: number
   elementCount?: number
   setShowCelebration: (value: boolean) => void
@@ -12,11 +12,11 @@ const ProgressArea = ({
   elementCount = 120,
   setShowCelebration,
   ...rest
-}: iProps) => {
+}: IProps) => {
   return (
     <Box w={300} {...rest}>
       {count < elementCount ? (
-        <Box class="no-print">
+        <Box className="no-print">
           <Heading fontSize={20}>
             Elements needed: {elementCount - count}
           </Heading>

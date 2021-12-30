@@ -70,7 +70,7 @@ const PeriodicTable = ({ data, setData, setForm }) => {
         </Flex>
       </Box>
       <Flex>
-        <Tabs class="no-print">
+        <Tabs className="no-print">
           <TabList>
             <Tab>View Code</Tab>
           </TabList>

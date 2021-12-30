@@ -1,18 +1,5 @@
-import {
-  chakra,
-  Box,
-  Button,
-  Flex,
-  Grid,
-  Heading,
-  Tab,
-  Tabs,
-  TabList,
-  TabPanel,
-  TabPanels,
-} from '@chakra-ui/react'
+import { chakra, Box, Button, Flex, Grid, Heading } from '@chakra-ui/react'
 import { useState } from 'react'
-import VideoBox from './VideoBox'
 import Element from './Element'
 import Guide from './Guide'
 import Editor from './Editor'
@@ -57,18 +44,9 @@ const PeriodicTable = ({ data, setData }) => {
               Toggle Grid
             </Button>
           </Flex>
-          <Tabs class="no-print">
-            <TabList>
-              <Tab>View Code</Tab>
-            </TabList>
-            <TabPanels>
-              <TabPanel>
-                <Editor data={data} setData={setData} />
-              </TabPanel>
-            </TabPanels>
-          </Tabs>
+          <Editor data={data} setData={setData} />
         </Box>
-        <VideoBox />
+        {/* <VideoBox /> */}
       </Flex>
     </Box>
   )

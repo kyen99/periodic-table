@@ -64,7 +64,7 @@ const PeriodicTable = ({ data, setData, setShowCelebration, ...props }) => {
               Toggle Grid
             </Button>
           </Flex>
-          <Tabs class="no-print">
+          <Tabs className="no-print">
             <TabList>
               <Tab>Element Words</Tab>
               <Tab>View Code</Tab>
