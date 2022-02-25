@@ -1,4 +1,4 @@
-import { chakra, Box, Flex, Text } from '@chakra-ui/react'
+import { chakra, Flex, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
 const Element = ({

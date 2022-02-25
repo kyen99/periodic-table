@@ -33,7 +33,7 @@ const PeriodicTable = ({ data, setData, setForm }) => {
         mt={8}
         onClick={({ pageX, pageY }) => {
           const col = Math.floor((pageX - 300) / 50)
-          const row = Math.floor((pageY - 90) / 50)
+          const row = Math.floor((pageY - 140) / 50)
           setForm({ row: row.toString(), column: col.toString() })
         }}
       >
