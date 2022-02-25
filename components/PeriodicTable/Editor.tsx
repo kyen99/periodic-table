@@ -33,12 +33,12 @@ const Editor = ({ data, setData, ...rest }) => {
   }
 
   return (
-    <Flex direction='column' {...rest}>
+    <Flex direction="column" {...rest}>
       <Monaco
-        height='80vh'
-        language='json'
+        height="80vh"
+        language="json"
         value={JSON.stringify(data, null, 2)}
-        editorDidMount={handleEditorDidMount}
+        onMount={handleEditorDidMount}
         options={{ minimap: { enabled: false } }}
       />
       <Button disabled={!isValid} onClick={handleSave}>
