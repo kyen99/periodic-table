@@ -24,7 +24,7 @@ const PeriodicTable = ({ data, setData, setForm }) => {
   const [showGuide, setShowGuide] = useState(true)
   return (
     <Box w="100%">
-      <Flex justify="space-around">
+      <Flex justify="space-between" m={4}>
         <Heading fontSize={36} minH={54}>
           {title}
         </Heading>
