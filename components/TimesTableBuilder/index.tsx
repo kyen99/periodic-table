@@ -34,7 +34,13 @@ const PeriodicTable = ({ data, setData, setForm }) => {
         onClick={({ pageX, pageY }) => {
           const col = Math.floor((pageX - 300) / 50)
           const row = Math.floor((pageY - 140) / 50)
-          setForm({ row: row.toString(), column: col.toString() })
+          const item = data.elements[`${row.toString()}-${col.toString()}`] || {
+            row: row.toString(),
+            column: col.toString(),
+            color: '',
+            number: '',
+          }
+          setForm(item)
         }}
       >
         <Box position="relative" mt={50}>

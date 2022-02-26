@@ -15,6 +15,7 @@ export const formDefault = {
   number: '',
   row: '',
   column: '',
+  color: '',
 }
 
 const ElementForm = ({ form, setForm, setData, ...rest }) => {
