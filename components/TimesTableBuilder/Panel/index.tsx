@@ -3,7 +3,7 @@ import { useRef } from 'react'
 import ElementForm from './ElementForm'
 import ElementList from './ElementList'
 
-const Panel = ({ data, setData, reset, form, setForm, ...rest }) => {
+const Panel = ({ data, setData, reset, form, setForm, submitRef, ...rest }) => {
   const scrollArea = useRef()
   return (
     <Box {...rest} overflow="scroll" ref={scrollArea}>
@@ -38,7 +38,13 @@ const Panel = ({ data, setData, reset, form, setForm, ...rest }) => {
           </Box>
         </Flex>
       </Box>
-      <ElementForm form={form} setForm={setForm} setData={setData} mb={10} />
+      <ElementForm
+        form={form}
+        setForm={setForm}
+        setData={setData}
+        submitRef={submitRef}
+        mb={10}
+      />
       <ElementList
         elements={data.elements}
         setForm={setForm}

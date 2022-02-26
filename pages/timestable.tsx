@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Box, Flex } from '@chakra-ui/react'
 import Panel from '../components/TimesTableBuilder/Panel'
 import TimesTableBuilder from '../components/TimesTableBuilder'
@@ -14,6 +14,7 @@ const defaultData: iNumbers | null = {
 }
 
 export default function Home() {
+  const submitRef = useRef()
   const [data, setData] = useState<iNumbers>(null)
   const [form, setForm] = useState(formDefault)
 
@@ -50,6 +51,7 @@ export default function Home() {
           reset={handleReset}
           form={form}
           setForm={setForm}
+          submitRef={submitRef}
         />
         <TimesTableBuilder
           p={4}
@@ -57,6 +59,7 @@ export default function Home() {
           setData={setData}
           w="100%"
           setForm={setForm}
+          submitRef={submitRef}
         />
       </Flex>
     </Box>

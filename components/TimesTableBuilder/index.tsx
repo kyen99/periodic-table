@@ -18,7 +18,7 @@ import Editor from './Editor'
 import Calculator from './Calculator'
 import { colorOptions } from './Panel/ElementForm'
 
-const PeriodicTable = ({ data, setData, setForm }) => {
+const PeriodicTable = ({ data, setData, setForm, submitRef }) => {
   const { title } = data
   const rows = new Array(parseInt(data.rows || '0')).fill(1)
   const [showGuide, setShowGuide] = useState(true)
@@ -36,7 +36,9 @@ const PeriodicTable = ({ data, setData, setForm }) => {
         onClick={({ pageX, pageY }) => {
           const col = Math.floor((pageX - 300) / 50)
           const row = Math.floor((pageY - 140) / 50)
-          const item = data.elements[`${row.toString()}-${col.toString()}`] || {
+          const existingItem =
+            data.elements[`${row.toString()}-${col.toString()}`]
+          const newItem = {
             row: row.toString(),
             column: col.toString(),
             color:
@@ -44,7 +46,12 @@ const PeriodicTable = ({ data, setData, setForm }) => {
                 .value,
             number: row * col,
           }
-          setForm(item)
+          if (existingItem) {
+            setForm(existingItem)
+            return
+          }
+          setForm(newItem)
+          setTimeout(() => submitRef.current.click(), 100)
         }}
       >
         <Box position="relative" mt={50}>

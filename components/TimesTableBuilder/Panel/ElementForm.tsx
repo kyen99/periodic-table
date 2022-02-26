@@ -31,7 +31,7 @@ export const colorOptions = [
   { name: 'light purple', value: '#9400d3' },
 ]
 
-const ElementForm = ({ form, setForm, setData, ...rest }) => {
+const ElementForm = ({ form, setForm, setData, submitRef, ...rest }) => {
   const handleSubmit = (e: SyntheticEvent) => {
     e.preventDefault()
     setData((data) => ({
@@ -94,7 +94,7 @@ const ElementForm = ({ form, setForm, setData, ...rest }) => {
             </Select>
           </GridItem>
 
-          <Button colorScheme="blue" type="submit">
+          <Button ref={submitRef} colorScheme="blue" type="submit">
             Save
           </Button>
           <Button onClick={() => setForm(formDefault)}>Clear</Button>
