@@ -16,6 +16,7 @@ import Element from './Element'
 import Guide from './Guide'
 import Editor from './Editor'
 import Calculator from './Calculator'
+import { colorOptions } from './Panel/ElementForm'
 
 const PeriodicTable = ({ data, setData, setForm }) => {
   const { title } = data
@@ -38,8 +39,10 @@ const PeriodicTable = ({ data, setData, setForm }) => {
           const item = data.elements[`${row.toString()}-${col.toString()}`] || {
             row: row.toString(),
             column: col.toString(),
-            color: '',
-            number: '',
+            color:
+              colorOptions[parseInt((row + col - 2).toString().slice(-1))]
+                .value,
+            number: row * col,
           }
           setForm(item)
         }}

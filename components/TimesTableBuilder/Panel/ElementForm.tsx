@@ -10,6 +10,7 @@ import {
   Select,
   Text,
 } from '@chakra-ui/react'
+import { redirect } from 'next/dist/server/api-utils'
 
 export const formDefault = {
   number: '',
@@ -17,6 +18,19 @@ export const formDefault = {
   column: '',
   color: '',
 }
+
+export const colorOptions = [
+  { name: 'red', value: 'red.500' },
+  { name: 'orange', value: 'orange.300' },
+  { name: 'yellow', value: 'yellow.200' },
+  { name: 'dark green', value: 'green.600' },
+  { name: 'green', value: 'green.500' },
+  { name: 'light green', value: 'green.300' },
+  { name: 'blue', value: 'blue.400' },
+  { name: 'light blue', value: 'cyan.200' },
+  { name: 'purple', value: '#8b008b' },
+  { name: 'light purple', value: '#9400d3' },
+]
 
 const ElementForm = ({ form, setForm, setData, ...rest }) => {
   const handleSubmit = (e: SyntheticEvent) => {
@@ -73,17 +87,11 @@ const ElementForm = ({ form, setForm, setData, ...rest }) => {
               onChange={(e) => setForm({ ...form, color: e.target.value })}
             >
               <option value=""></option>
-              <option value="blue.400">Blue</option>
-              <option value="cyan.200">Light Blue</option>
-              <option value="gray.300">Gray</option>
-              <option value="green.600">Dark Green</option>
-              <option value="green.500">Green</option>
-              <option value="green.300">Light Green</option>
-              <option value="orange.300">Orange</option>
-              <option value="#8b008b">Purple</option>
-              <option value="#9400d3">Light Purple</option>
-              <option value="red.500">Red</option>
-              <option value="yellow.200">Yellow</option>
+              {colorOptions.map((c) => (
+                <option key={c.name} value={c.value}>
+                  {c.name}
+                </option>
+              ))}
             </Select>
           </GridItem>
 
