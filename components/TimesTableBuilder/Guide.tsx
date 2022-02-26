@@ -4,13 +4,7 @@ const Guide = ({ rows, columns, ...props }) => {
   const c = new Array(parseInt(columns || '0')).fill(1)
   const r = new Array(parseInt(rows || '0')).fill(1)
   return (
-    <Box
-      className="no-print"
-      position="absolute"
-      top={-50}
-      zIndex={-1}
-      {...props}
-    >
+    <Box position="absolute" top={-50} zIndex={-1} {...props}>
       <Grid templateColumns={`repeat(${columns + 1}, 1fr)`}>
         <Grid h={50} w={50} placeItems="center" />
         {c.map((_, ci) => (
