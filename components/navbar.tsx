@@ -12,6 +12,7 @@ const NavLink = ({ href, title, ...rest }) => (
 const Navbar = ({ selected, ...rest }) => {
   return (
     <Flex
+      className="no-print"
       minH={50}
       flex={1}
       bgColor="gray.300"

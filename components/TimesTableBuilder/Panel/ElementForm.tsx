@@ -10,7 +10,6 @@ import {
   Select,
   Text,
 } from '@chakra-ui/react'
-import { redirect } from 'next/dist/server/api-utils'
 
 export const formDefault = {
   number: '',

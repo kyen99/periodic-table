@@ -10,7 +10,7 @@ const Calc = () => {
   }, [values])
 
   return (
-    <Flex>
+    <Flex className="no-print">
       <Input
         w={16}
         value={values[0]}
