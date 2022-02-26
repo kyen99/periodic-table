@@ -31,6 +31,7 @@ const PeriodicTable = ({ data, setData, setForm }) => {
       </Flex>
       <Flex
         mt={8}
+        cursor="pointer"
         onClick={({ pageX, pageY }) => {
           const col = Math.floor((pageX - 300) / 50)
           const row = Math.floor((pageY - 140) / 50)
