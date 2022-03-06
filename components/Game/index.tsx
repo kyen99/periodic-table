@@ -85,7 +85,7 @@ const GameDisplay = () => {
       align="center"
       direction="column"
       h="100vh"
-      postion="relative"
+      position="relative"
       flex={1}
     >
       <Navbar selected="game" flex={1} />

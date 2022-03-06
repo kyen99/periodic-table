@@ -4,7 +4,6 @@ import {
   Stat,
   StatLabel,
   StatNumber,
-  StatHelpText,
   Progress,
 } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
@@ -20,7 +19,7 @@ const BathTime = () => {
       setCurrentTime(new Date())
       setTime(
         differenceInSeconds(
-          set(new Date(), { hours: 19, minutes: 30, seconds: 0 }),
+          set(new Date(), { hours: 20, minutes: 30, seconds: 0 }),
           new Date()
         )
       )
@@ -29,20 +28,26 @@ const BathTime = () => {
       clearInterval(timer)
     }
   }, [])
+  const hours = Math.floor(time / 60 / 60)
+  const minutes = Math.floor(time / 60 - hours * 60)
+  const seconds = time % 60
+
   return (
     <Flex direction="column">
-      <Navbar selected="bathtime" />
+      <Navbar selected="bathtime" position="sticky" top={0} />
       <Grid placeItems="center" height="100vh">
         <Stat transform="scale(4)">
-          <StatLabel>Bath Time at 7:30pm</StatLabel>
+          <StatLabel>
+            Current time is {currentTime.toLocaleTimeString()}
+          </StatLabel>
+          <StatLabel>Bath Time is 8:30pm</StatLabel>
           <StatNumber>
-            in {Math.floor(time / 60 / 60)} hours
+            in {hours} hours
             <br />
-            {Math.floor(time / 60)} minutes
+            {minutes} minutes
             <br />
-            {time % 60} seconds
+            {seconds} seconds
           </StatNumber>
-          <StatHelpText>{currentTime.toLocaleTimeString()}</StatHelpText>
           <Progress hasStripe value={10800 - time} max={10800} />
         </Stat>
       </Grid>
