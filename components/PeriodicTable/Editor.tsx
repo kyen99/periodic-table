@@ -14,9 +14,10 @@ const Editor = ({ data, setData, ...rest }) => {
   }, [editorRef])
 
   const checkCode = () => {
+    console.log(editorRef.current.getValue())
     if (editorRef) {
       try {
-        JSON.parse(editorRef.current())
+        JSON.parse(editorRef.current.getValue())
         setIsValid(true)
       } catch (e) {
         setIsValid(false)
@@ -25,7 +26,7 @@ const Editor = ({ data, setData, ...rest }) => {
   }
 
   const handleSave = () => {
-    setData(JSON.parse(editorRef.current()))
+    setData(JSON.parse(editorRef.current.getValue()))
   }
 
   const handleEditorDidMount = (_ref) => {
