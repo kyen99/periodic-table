@@ -1,4 +1,5 @@
 import Monaco from '@monaco-editor/react'
+import type { Monaco as IMonaco } from '@monaco-editor/react'
 import { Button, Flex } from '@chakra-ui/react'
 import { useRef, useEffect, useState } from 'react'
 
@@ -29,8 +30,8 @@ const Editor = ({ data, setData, ...rest }) => {
     setData(JSON.parse(editorRef.current.getValue()))
   }
 
-  const handleEditorDidMount = (_ref) => {
-    editorRef.current = _ref
+  const handleOnMount = (editor: IMonaco) => {
+    editorRef.current = editor
   }
 
   return (
@@ -39,7 +40,7 @@ const Editor = ({ data, setData, ...rest }) => {
         height="80vh"
         language="json"
         value={JSON.stringify(data, null, 2)}
-        onMount={handleEditorDidMount}
+        onMount={handleOnMount}
         options={{ minimap: { enabled: false } }}
       />
       <Button disabled={!isValid} onClick={handleSave}>
