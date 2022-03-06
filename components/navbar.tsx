@@ -23,20 +23,20 @@ const Navbar = ({ selected, ...rest }) => {
     >
       <NavLink
         href="/"
-        title="Home"
+        title="Periodic Table"
         fontWeight={selected === 'home' ? 800 : 400}
-      />{' '}
-      |
-      <NavLink
-        href="/pokemon"
-        title="Pokemon"
-        fontWeight={selected === 'pokemon' ? 800 : 400}
       />{' '}
       |
       <NavLink
         href="/game"
         title="Periodic Table Game"
         fontWeight={selected === 'game' ? 800 : 400}
+      />{' '}
+      |
+      <NavLink
+        href="/pokemon"
+        title="Pokemon"
+        fontWeight={selected === 'pokemon' ? 800 : 400}
       />{' '}
       |
       <NavLink

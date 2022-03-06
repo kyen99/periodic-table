@@ -12,7 +12,7 @@ const PeriodicTable = ({ data, setData }) => {
   return (
     <Box h="100vh" w="100%">
       <Flex justify="space-between">
-        <Heading fontSize={36} minH={54}>
+        <Heading fontSize={36} minH={54} m={4}>
           {title}
         </Heading>
       </Flex>
